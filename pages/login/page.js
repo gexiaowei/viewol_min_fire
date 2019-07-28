@@ -47,6 +47,12 @@ Page({
             globalData.uid = result.userId
             globalData.sessionId = result.sessionId
             wx.switchTab({ url: "../index/page" })
+        } else {
+            wx.pro.showToast({
+                icon: 'none',
+                title: message,
+                duration: 1500
+            })
         }
     }
 })
