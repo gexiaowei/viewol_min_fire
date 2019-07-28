@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/index/page",
+        "pages/login/page",
+        "pages/products/page",
+        "pages/products/detail",
+        "pages/exhibitors/page",
+        "pages/activity/page",
+        "pages/activity/detail",
+        "pages/news/page",
+        "pages/news/detail",
+        "pages/my/page",
+        "pages/tools/apply",
+        "pages/about/page",
+        "pages/web/page"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "消防展",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#666464",
+        "borderStyle": "white",
+        "selectedColor": "#3d3ab2",
+        "backgroundColor": "#fff",
+        "list": [{
+                "pagePath": "pages/index/page",
+                "text": "首页",
+                "iconPath": "images/common/icon_home.png",
+                "selectedIconPath": "images/common/icon_home_blue.png"
+            },
+            {
+                "pagePath": "pages/activity/page",
+                "text": "日程",
+                "iconPath": "images/common/icon_activity.png",
+                "selectedIconPath": "images/common/icon_activity_blue.png"
+            },
+            {
+                "pagePath": "pages/exhibitors/page",
+                "text": "展商",
+                "iconPath": "images/common/icon_company.png",
+                "selectedIconPath": "images/common/icon_company_blue.png"
+            },
+            {
+                "pagePath": "pages/my/page",
+                "text": "我的",
+                "iconPath": "images/common/icon_my.png",
+                "selectedIconPath": "images/common/icon_my_blue.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

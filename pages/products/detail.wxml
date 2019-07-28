@@ -1,0 +1,89 @@
+<wxs module="format" src="../../utils/format.wxs" />
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page_hd">
+    <view class="weui-flex company-container">
+        <view class="weui-flex logo">
+            <image src="{{company.logoView}}" mode="widthFix" lazy-load="{{true}}" />
+        </view>
+        <view class="weui-flex__item">
+            <view class="name">{{company.name}}</view>
+            <view class="other">
+                <text class="content">{{company.place}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="page__bd">
+    <view class="information">
+        <view class="topic">
+            <view class="main">展品详情</view>
+            <view class="sub">PRODUCT DISPLAY</view>
+        </view>
+        <view class="cover">
+            <image src="{{product.imageView}}" mode="widthFix" lazy-load="true" />
+        </view>
+        <view class='desc'>
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+    </view>
+    <view class="relative">
+        <view class="topic">
+            <view class="main">其他展品</view>
+        </view>
+        <view class="weui-flex product">
+            <navigator url="./detail?id={{item.id}}" open-type="redirect" class="weui-flex__item item" wx:for="{{relative_products}}" wx:key="id">
+                <view class="weui-flex cover">
+                    <image class="" src="{{item.imageView}}" mode="scaleToFill" lazy-load="{{true}}"></image>
+                </view>
+                <view class="name">{{item.name}}</view>
+            </navigator>
+        </view>
+    </view>
+    <view>
+        <view class="topic">
+            <view class="main">人气</view>
+        </view>
+        <view class="praise">
+            <view class="icon-container" bindtap="praiseProduct">
+                <image class="icon" src="../../images/common/icon_praise.png" mode="widthFix" />
+            </view>
+            <view class="desc">喜欢就点个赞吧</view>
+            <view class="count">({{praise.length}}赞)</view>
+            <view class="name">
+                <text wx:for="{{praise}}" wx:key="id" wx:if="{{item.userName}}">
+                    {{item.userName}}、
+                </text>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="topic">
+            <view class="main">围观</view>
+        </view>
+        <view class="watch">
+            <view class="avatar-list">
+                <image wx:for="{{see}}" wx:key="key" class="avatar" src="{{item.headImgUrl}}" mode="widthFix" />
+            </view>
+        </view>
+    </view>
+    <view class="">
+        <view class="topic">
+            <view class="main">评论</view>
+        </view>
+        <view class="comment">
+            <view class="item weui-flex" wx:for="{{comment}}" wx:key="id">
+                <view class="avatar-container">
+                    <image class="avatar" src="{{item.headImgUrl}}" mode="widthFix" />
+                </view>
+                <view class="weui-flex__item info">
+                    <view class="name">{{item.userName}}</view>
+                    <view class="time">{{format.date(item.cTime)}}</view>
+                    <view class="content">{{item.comment}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="page_fd">
+    <input type="text" value="{{message}}" placeholder="我也要评论..." bindconfirm="commitComment" confirm-type="send" />
+</view>

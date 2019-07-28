@@ -1,0 +1,214 @@
+@import "../../weui.wxss";
+.company-container {
+    align-items: center;
+    padding: 37rpx 32rpx;
+}
+
+.company-container .logo {
+    width: 120rpx;
+    height: 120rpx;
+    border: 1rpx solid #EFF2F6;
+    border-radius: 120rpx;
+    justify-content: center;
+    align-items: center;
+    padding: 10rpx;
+    margin-right: 27rpx;
+}
+
+.company-container .logo image {
+    width: 100%
+}
+
+.company-container .name {
+    color: #2B3C4C;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.company-container .other {
+    margin-top: -7rpx;
+}
+
+.company-container .other .content {
+    display: inline-block;
+    font-size: 22rpx;
+    color: #4E4E4E;
+    border-radius: 3rpx;
+    border: 1rpx solid #E2E2E2;
+    padding: 0 10rpx;
+}
+
+.topic {
+    text-align: center;
+    background: #EFF2F6;
+    padding: 30rpx 0;
+}
+
+.topic .main {
+    font-size: 28rpx;
+    color: #75828E;
+    position: relative;
+}
+
+.topic .main::before {
+    content: "";
+    position: absolute;
+    height: 2rpx;
+    left: 10%;
+    top: 50%;
+    background: #E2E2E2;
+    width: 30%;
+}
+
+.topic .main::after {
+    content: "";
+    position: absolute;
+    height: 2rpx;
+    top: 50%;
+    width: 30%;
+    background: #E2E2E2;
+    right: 10%;
+}
+
+.topic .sub {
+    font-size: 14rpx;
+    color: #A7AAAE;
+    transform: scale(.8);
+    margin-bottom: -20rpx;
+}
+
+.information .cover {
+    padding: 20rpx 0;
+    text-align: center;
+}
+
+.information .cover image {
+    max-width: 440rpx;
+}
+
+.information .desc {
+    padding: 20rpx 33rpx;
+    text-align: left;
+    color: #75828E;
+    font-size: 30rpx;
+}
+
+.relative .product {
+    padding: 40rpx;
+    text-align: center;
+}
+
+.relative .product .item {
+    margin: 0 6rpx;
+}
+
+.relative .cover {
+    height: 200rpx;
+    border: 1rpx solid #B0CBE6;
+    border-radius: 10rpx;
+    padding: 12rpx;
+    align-items: center;
+}
+
+.relative .cover image {
+    width: 100%;
+    height: 100%
+}
+
+.relative .name {
+    margin-top: 25rpx;
+    font-size: 26rpx;
+    color: #2B3C4C;
+}
+
+.praise {
+    padding: 40rpx 30rpx;
+    text-align: center;
+    font-size: 26rpx;
+}
+
+.praise .icon-container .icon {
+    width: 168rpx;
+}
+
+.praise .desc {
+    margin-top: 20rpx;
+    color: #273C4E;
+}
+
+.praise .count {
+    color: #829CB5;
+}
+
+.praise .name {
+    text-align: left;
+    color: #829CB5;
+}
+
+.praise .name text {
+    display: inline-block;
+}
+
+.watch {
+    padding: 30rpx;
+    text-align: center;
+}
+
+.watch .avatar {
+    width: 88rpx;
+    height: 88rpx;
+    background: white;
+    border-radius: 88rpx;
+    border: 4rpx solid white;
+    margin-left: -10rpx;
+}
+
+.comment {
+    padding: 0 30rpx;
+}
+
+.comment .item {
+    padding: 20rpx 0;
+}
+
+.comment .item .avatar-container {
+    margin-right: 20rpx;
+}
+
+.comment .item .avatar {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 88rpx;
+}
+
+.comment .item .info {
+    border-bottom: 1rpx solid #EFF2F6;
+}
+
+.comment .item .name {
+    font-size: 26rpx;
+    color: #273C4E;
+}
+
+.comment .item .time {
+    font-size: 22rpx;
+    color: #ABACAC;
+}
+
+.comment .item .content {
+    font-size: 30rpx;
+    color: #2B3C4C;
+    padding-bottom: 20rpx;
+}
+
+.page_fd {
+    padding: 13rpx 59rpx;
+    box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+.page_fd input {
+    font-size: 30rpx;
+    border-radius: 42rpx;
+    background: #EFF2F6;
+    padding: 15rpx 55rpx;
+}

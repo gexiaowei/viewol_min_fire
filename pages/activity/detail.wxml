@@ -1,0 +1,16 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page_hd">
+    <view class="title">{{info.title}}</view>
+    <view class="company">主办单位: {{info.companyName}}</view>
+    <view class="time">时间: {{info.startTime}} - {{info.endTime}}</view>
+    <view class="place">
+        <view class="icon">
+            <image src="../../images/common/icon_place.png" mode="widthFix" />
+        </view>
+        <view class="place">{{info.place}}</view>
+    </view>
+</view>
+<view class="page_bd">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view class="page_fd" wx:if="{{applyStatus!==2}}" bindtap="applyJoin">立即报名</view>

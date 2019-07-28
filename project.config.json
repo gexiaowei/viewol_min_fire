@@ -1,0 +1,63 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "autoAudits": false,
+        "coverView": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.7.7",
+    "appid": "wxa58cc33efa0598d3",
+    "projectname": "viewol_min_fire",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "isGameTourist": false,
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "currentL": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": [{
+                    "id": 0,
+                    "name": "展商秀",
+                    "pathName": "pages/index/page",
+                    "query": "scene=11:6:12",
+                    "scene": "1013"
+                },
+                {
+                    "id": 0,
+                    "name": "论坛活动",
+                    "pathName": "pages/index/page",
+                    "query": "scene=12:106",
+                    "scene": "1014"
+                },
+                {
+                    "id": 0,
+                    "name": "模拟产品",
+                    "pathName": "pages/about/page",
+                    "scene": "1015"
+                }
+            ]
+        }
+    }
+}

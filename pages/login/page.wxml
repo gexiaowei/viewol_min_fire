@@ -1,0 +1,13 @@
+<view class="page">
+    <view class='page_hd'>
+        <image src='/images/index/title.png' mode="widthFix"></image>
+    </view>
+    <view class='page_bd'>
+        <view class="tip">该程序将获得以下授权</view>
+        <view class="desc">获得您的公开信息（头像、昵称等）</view>
+        <view>（取消授权您可能错过很多哦）</view>
+    </view>
+    <view class="page_fd">
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即授权</button>
+    </view>
+</view>

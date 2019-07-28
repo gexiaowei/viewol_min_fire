@@ -1,0 +1,33 @@
+<view class="page weui-flex">
+    <view class="page_bd weui-flex__item">
+        <view class="weui-flex item">
+            <view class="title">主题</view>
+            <view class="weui-flex__item">
+                <input placeholder-style="color:#829cb5" placeholder="输入活动主题" type="text" value="{{title}}"  data-key="title" bindchange="bindChange" />
+            </view>
+        </view>
+        <view class="weui-flex item">
+            <view class="title">时间</view>
+            <view class="weui-flex__item">
+                <picker mode="date" value="{{startTime}}" start="2019-10-16" end="2019-10-19" data-key="startTime" bindchange="bindChange">
+                    <view style="color:#829cb5">{{startTime||'输入活动时间'}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class="weui-flex item">
+            <view class="title">地址</view>
+            <view class="weui-flex__item">
+                <input placeholder-style="color:#829cb5" placeholder="输入活动地址" type="text" value="{{place}}" data-key="place" bindchange="bindChange" />
+            </view>
+        </view>
+        <view class="weui-flex item">
+            <view class="title">介绍</view>
+            <view class="weui-flex__item">
+                <input placeholder-style="color:#829cb5" placeholder="输入活动介绍" type="text" value="{{content}}"  data-key="content" bindchange="bindChange" />
+            </view>
+        </view>
+    </view>
+    <view class="page_fd">
+        <button bindtap="applyActivity">立即申请</button>
+    </view>
+</view>

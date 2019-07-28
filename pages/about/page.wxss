@@ -1,0 +1,162 @@
+@import "/weui.wxss";
+.page_bd {
+  padding: 32rpx;
+  font-size: 36rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  text-align: center;
+  color: #2661a7;
+  align-items: center;
+  justify-content: center;
+}
+
+.title .name {
+  display: inline-block;
+  padding: 0 40rpx;
+}
+
+.arrow {
+  display: inline-block;
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 4rpx solid #2661a7;
+  border-right: 4rpx solid #2661a7;
+  transform: rotate(45deg);
+}
+
+.arrow.flip {
+  border-bottom: 4rpx solid #2661a7;
+  border-left: 4rpx solid #2661a7;
+  border-top: none;
+  border-right: none;
+}
+
+.sub-title {
+  font-size: 24rpx;
+  text-align: center;
+  color: #bababa;
+}
+
+.arrangement-name {
+  margin: 40rpx 0 30rpx;
+  color: #094a8a;
+  font-weight: bold;
+}
+
+.article {
+  text-indent: 72rpx;
+  line-height: 60rpx;
+  color: #2b3c4c;
+}
+
+.article:first-child {
+  margin-top: 40rpx;
+}
+
+.article:not(:first-child) {
+  margin-top: 60rpx;
+}
+
+.article:last-child {
+  margin-bottom: 40rpx;
+}
+
+.time-container {
+  margin-top: 6rpx;
+}
+
+.left {
+  width: 49rpx;
+}
+
+.left image {
+  width: 49rpx;
+  height: 49rpx;
+}
+
+.right {
+  margin-left: 24rpx;
+}
+
+.right .time {
+  color: #094a8a;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.activity .left {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.activity .left::before {
+  content: "";
+  position: absolute;
+  width: 2rpx;
+  left: calc(50% - 1rpx);
+  top: -8rpx;
+  height: 50%;
+  background: #a3c2e1;
+}
+
+.activity .left::after {
+  content: "";
+  position: absolute;
+  width: 2rpx;
+  left: calc(50% - 1rpx);
+  bottom: -8rpx;
+  height: 50%;
+  background: #a3c2e1;
+}
+
+.activity .left .point {
+  width: 12rpx;
+  height: 12rpx;
+  background: #3871b0;
+  border-radius: 12rpx;
+}
+
+.activity .right {
+  position: relative;
+  color: #2b3c4c;
+  font-size: 30rpx;
+  background: #eaf1f9;
+  padding: 32rpx 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+
+.activity .right::before {
+  content: "";
+  position: absolute;
+  left: -18rpx;
+  top: calc(50% - 20rpx);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #eaf1f9 transparent transparent;
+}
+
+.activity .right .desc {
+  margin-left: 20rpx;
+}
+
+.page_fd {
+  background: #eaf1f9;
+  padding: 40rpx;
+}
+
+.tip {
+  font-size: 36rpx;
+  color: #144b83;
+}
+
+.content {
+  font-size: 32rpx;
+  color: #2b3c4c;
+}

@@ -1,0 +1,273 @@
+@import "../../weui.wxss";
+.page {
+    background-color: #b2cce7;
+    background-size: 100% auto;
+}
+
+.title {
+    width: 100%;
+}
+
+.grid {
+    border: none;
+}
+
+.grid .weui-grid {
+    border: none;
+}
+
+.grid .weui-grid .weui-grid__icon {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.grid .weui-grid .weui-grid__label {
+    color: #2b3c4c;
+    font-size: 30rpx;
+}
+
+.active {
+    padding: 0 30rpx;
+}
+
+.active image {
+    width: 100%;
+}
+
+.active .wx-swiper-dots-horizontal {
+    left: auto;
+    right: 0;
+}
+
+.active .wx-swiper-dot {
+    color: white;
+    opacity: 0.5;
+}
+
+.active .wx-swiper-dot-active {
+    color: white;
+    opacity: 1;
+}
+
+.active .wx-swiper-dot::before {
+    content: "\2013";
+}
+
+.normal-title {
+    color: #2661a7;
+    font-size: 31rpx;
+    background: transparent;
+}
+
+.normal-title::before,
+.normal-title::after {
+    border: none;
+}
+
+.normal-title .icon {
+    width: 30rpx;
+    height: 24rpx;
+    margin-right: 10rpx;
+}
+
+.normal-title .more {
+    color: #2661a7;
+    font-size: 31rpx;
+}
+
+.normal-title .more::after {
+    border-color: #2661a7;
+}
+
+.normal-title>navigator {
+    padding: 0;
+}
+
+.time-line,
+.exhibitors,
+.product {
+    margin-top: 25rpx;
+    padding: 30rpx;
+}
+
+.time-line .content,
+.exhibitors .content {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10rpx;
+    padding: 30rpx;
+}
+
+.time-line .events .item {
+    margin-top: 35rpx;
+}
+
+.time-line .events .item .icon-container {
+    position: relative;
+}
+
+.time-line .events .item:not(:first-child) .icon-container::before {
+    content: "";
+    width: 1rpx;
+    background: #a3c2e1;
+    position: absolute;
+    left: 50%;
+    top: -35rpx;
+    height: 35rpx;
+}
+
+.time-line .events .item .icon-container::after {
+    content: "";
+    width: 1rpx;
+    background: #a3c2e1;
+    position: absolute;
+    left: 50%;
+    top: 49rpx;
+    bottom: 0;
+}
+
+.time-line .events .item .icon-container .icon {
+    width: 49rpx;
+    height: 49rpx;
+    z-index: 99;
+}
+
+.time-line .events .item .info {
+    position: relative;
+    margin-left: 38rpx;
+    background: white;
+    border-radius: 10rpx;
+    padding: 32rpx;
+}
+
+.time-line .events .item .info::before {
+    content: "";
+    position: absolute;
+    left: -20rpx;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20rpx 20rpx 20rpx 0;
+    border-color: transparent white transparent transparent;
+}
+
+.time-line .events .item .info .time {
+    font-size: 28rpx;
+    color: rgba(9, 74, 138, 1);
+}
+
+.time-line .events .item .info .topic {
+    margin-top: 16rpx;
+    font-size: 32rpx;
+    color: rgba(43, 60, 76, 1);
+}
+
+.time-line .events .item .info .location {
+    font-size: 32rpx;
+    color: rgba(43, 60, 76, 1);
+}
+
+.exhibitors .list,
+.product .list {
+    margin-top: 25rpx;
+}
+
+.exhibitors .list .weui-flex {
+    margin: 0 -10rpx;
+}
+
+.exhibitors .list swiper {
+    height: 340rpx;
+}
+
+.exhibitors .list .item {
+    height: 146rpx;
+    padding: 0 20rpx;
+    border-radius: 10rpx;
+    background: white;
+    margin: 10rpx;
+    display: flex;
+    align-items: center;
+}
+
+.exhibitors .list .item image {
+    width: 100%;
+}
+
+.product .content {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10rpx;
+}
+
+.product .content .normal-title {
+    padding: 30rpx 30rpx 0 30rpx;
+}
+
+.product .list swiper {
+    height: 858rpx;
+}
+
+.product .list .item {
+    min-height: 216rpx;
+}
+
+.product .list .item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.product .list .item .preview {
+    padding: 40rpx 0;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background: white;
+}
+
+.product .list .item image {
+    width: 190rpx;
+    height: 190rpx;
+}
+
+.product .list .item .about {
+    background-color: #668db6;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.product .list .item:nth-child(odd) .about::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: -18rpx;
+    top: 45%;
+    border-style: solid;
+    border-width: 20rpx 20rpx 20rpx 0;
+    border-color: transparent #668db6 transparent transparent;
+}
+
+.product .list .item:nth-child(even) .about::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    right: -18rpx;
+    top: 45%;
+    border-style: solid;
+    border-width: 20rpx 0 20rpx 20rpx;
+    border-color: transparent transparent transparent #668db6;
+}
+
+.product .list .item .name {
+    color: white;
+    font-size: 32rpx;
+}
+
+.product .list .item .desc {
+    margin-top: 10rpx;
+    color: white;
+    font-size: 24rpx;
+}

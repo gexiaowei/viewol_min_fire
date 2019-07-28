@@ -1,0 +1,40 @@
+@import "/weui.wxss";
+page {
+    height: 100%;
+    background: #b0cae6;
+}
+
+.page {
+    height: 100%;
+    flex-direction: column;
+}
+
+.page_bd {
+    margin: 30rpx;
+    padding: 30rpx;
+    background: rgba(255, 255, 255, .5);
+}
+
+.page_bd .item {
+    align-items: center;
+    font-size: 32rpx;
+    margin-top: 30rpx;
+}
+
+.page_bd .item .title {
+    color: #094a8a;
+    margin-right: 30rpx;
+}
+
+.page_bd input,
+.page_bd picker {
+    background: white;
+    border-radius: 6rpx;
+    padding: 20rpx;
+}
+
+.page_fd button {
+    background: #f72f30;
+    color: white;
+    border-radius: 0;
+}

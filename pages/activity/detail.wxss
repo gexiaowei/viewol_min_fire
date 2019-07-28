@@ -1,0 +1,57 @@
+@import "../../weui.wxss";
+.page_hd {
+    color: #2b3c4c;
+    text-align: center;
+    padding: 31rpx;
+}
+
+.page_hd .title {
+    font-size: 42rpx;
+    font-weight: 500;
+}
+
+.page_hd .company {
+    margin-top: 20rpx;
+    font-size: 36rpx;
+}
+
+.page_hd .time {
+    margin-top: 10rpx;
+    font-size: 36rpx;
+}
+
+.page_hd .place {
+    margin-top: 30rpx;
+    font-size: 36rpx;
+    color: #2661a7;
+}
+
+.page_hd .place .icon {
+    text-align: center;
+}
+
+.page_hd .place .icon image {
+    width: 36rpx;
+}
+
+.page_bd {
+    padding: 31rpx;
+}
+
+.page_bd .wxParse-p {
+    font-size: 36rpx;
+    color: #2b3c4c;
+    line-height: 68rpx;
+}
+
+.page_fd {
+    padding: 37rpx;
+    font-size: 36rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #F72F30;
+    color: white;
+    text-align: center;
+}

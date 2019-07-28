@@ -1,0 +1,119 @@
+/* pages/firefighting/index/page.wxss */
+
+@import "../../weui.wxss";
+.page__hd {
+    padding: 30rpx 0;
+}
+
+.search-container {
+    background: white;
+    border-radius: 60rpx;
+    padding: 0 20rpx;
+    align-items: center;
+}
+
+.search-container image {
+    width: 26rpx;
+}
+
+.search {
+    padding: 10rpx;
+    font-size: 28rpx;
+}
+
+.phcolor {
+    color: #2661A7;
+}
+
+.type-container {
+    margin-left: 30rpx;
+}
+
+.type-container picker {
+    background: white;
+    border-radius: 60rpx;
+    color: #2A64A9;
+    font-size: 28rpx;
+    padding: 16rpx 26rpx;
+}
+
+.type-container picker image {
+    width: 30rpx;
+    margin-left: 10rpx;
+}
+
+.exhibitors-container {
+    background: #B2CCE7;
+    padding: 0 30rpx 21rpx;
+}
+
+.exhibitors {
+    background: transparent;
+}
+
+.exhibitors::after {
+    border: none;
+}
+
+.exhibitors::before,
+.exhibitors .item::before {
+    border: none;
+}
+
+.exhibitors .item {
+    margin-top: 20rpx;
+    background: #D9E6F2;
+}
+
+.exhibitors .item .logo-container {
+    background: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rpx;
+    padding: 5rpx;
+}
+
+.exhibitors .item .title {
+    font-size: 30rpx;
+    color: rgba(51, 51, 51, 1);
+}
+
+.exhibitors .item .desc {
+    font-size: 24rpx;
+    color: rgba(128, 128, 128, 1);
+    line-height: 38rpx;
+}
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+    color: #fff;
+}
+
+.drawer_attr_box {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+}
+
+.drawer_attr_content {
+    height: 600rpx;
+    overflow-y: scroll;
+}
+
+.drawer_desc {
+    padding: 20rpx;
+    font-size: 26rpx;
+    border-bottom: 1rpx solid #D9E6F2;
+}
