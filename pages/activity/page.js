@@ -28,7 +28,7 @@ Page({
         sliderOffset: 0,
         sliderLeft: 0,
         schedule_list: [],
-        is_self: 0
+        is_self: null
     },
 
     onLoad: async function() {
@@ -40,9 +40,14 @@ Page({
     },
 
     onShow: function() {
-        this.setData({ is_self: globalData.firefighting_activity_self })
-        if (globalData.firefighting_activity_self === 1) this.getSelfScheduleList()
-        else this.getScheduleList()
+        if (globalData.firefighting_activity_self != this.data.is_self) {
+            this.setData({ is_self: globalData.firefighting_activity_self })
+            if (globalData.firefighting_activity_self === 1) this.getSelfScheduleList()
+            else this.getScheduleList()
+        }
+    },
+
+    onTabItemTap(item) {
         globalData.firefighting_activity_self = 0
     },
 

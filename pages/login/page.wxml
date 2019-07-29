@@ -8,6 +8,9 @@
         <view>（取消授权您可能错过很多哦）</view>
     </view>
     <view class="page_fd">
-        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即授权</button>
+        <button wx:if="{{!auth}}" open-type="getUserInfo" bindgetuserinfo="login">立即授权</button>
+        <button wx:if="{{auth}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+            授权手机号码
+        </button>
     </view>
 </view>

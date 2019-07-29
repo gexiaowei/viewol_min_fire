@@ -1,5 +1,3 @@
-/* pages/firefighting/index/page.wxss */
-
 @import "../../weui.wxss";
 .page__hd {
     padding: 30rpx 0;

@@ -22,7 +22,7 @@
     <view class="page__bd">
         <view class="weui-panel weui-panel_access product">
             <view class="weui-panel__bd">
-                <navigator url="/pages/firefighting/products/detail?id={{item.id}}" class="weui-media-box weui-media-box_appmsg item" hover-class="weui-cell_active" wx:for="{{product_list}}" wx:key="id">
+                <navigator url="/pages/products/detail?id={{item.id}}" class="weui-media-box weui-media-box_appmsg item" hover-class="weui-cell_active" wx:for="{{product_list}}" wx:key="id">
                     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
                         <image class="weui-media-box__thumb" src="{{item.imageView}}" mode="aspectFit" lazy-load="{{true}}" />
                     </view>

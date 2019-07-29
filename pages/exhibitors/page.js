@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        award: 0,
+        award: null,
         category_list: [],
         company_list: [],
         lastSeq: '',
@@ -24,8 +24,12 @@ Page({
 
     onShow: function() {
         setTimeout(() => {
-            this.setData({ award: globalData.firefighting_exhibitors_award })
-            this.getCompanyList(true)
+            console.log("TCL: this.data.award", this.data.award)
+            console.log("TCL: globalData.firefighting_exhibitors_award", globalData.firefighting_exhibitors_award)
+            if (this.data.award != globalData.firefighting_exhibitors_award) {
+                this.setData({ award: globalData.firefighting_exhibitors_award })
+                this.getCompanyList(true)
+            }
         }, 500)
 
     },
@@ -67,8 +71,8 @@ Page({
 
         if (status === '0000') {
             result.forEach(element => {
-                if (element.showInfo) element.link = encodeURIComponent(`https://www.view-ol.com/zsx/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
-                else element.link = encodeURIComponent(`https://www.view-ol.com/zsx/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}/#/detail`)
+                if (element.showInfo) element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+                else element.link = encodeURIComponent(`https://www.view-ol.com/zsx//#/detail?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
             });
             this.setData({ company_list: is_replace ? result : company_list.concat(result) })
             if (result.length) this.setData({ lastSeq: result[result.length - 1]['seq'] })

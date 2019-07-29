@@ -2,6 +2,7 @@ const { globalData, globalData: { http, regeneratorRuntime } } = getApp()
 
 Page({
     data: {
+        auth: false,
         code: null,
         ivStr: null,
         nickName: null,
@@ -9,25 +10,32 @@ Page({
         encryptedData: null,
     },
 
-    onLoad: async function () {
+    onLoad: async function() {
         const { authSetting } = await wx.pro.getSetting()
+        console.log("TCL: authSetting", authSetting)
         if (authSetting['scope.userInfo']) {
-            const { userInfo } = await wx.pro.getUserInfo()
-            console.log("TCL: userInfo", userInfo)
-            const { code } = await wx.pro.login()
-            this.setData({
-                code,
-                nickName: userInfo['nickName'],
-                headPic: userInfo['avatarUrl'],
-            })
+            this.setData({ auth: true })
+            this.login()
         }
     },
-    getPhoneNumber: function ({ detail }) {
+    login: async function() {
+        const { userInfo } = await wx.pro.getUserInfo()
+        const { code } = await wx.pro.login()
+        console.log("TCL: userInfo", userInfo)
+        this.setData({
+            code,
+            nickName: userInfo['nickName'],
+            headPic: userInfo['avatarUrl']
+        })
+    },
+
+
+    getPhoneNumber: function({ detail }) {
         const { encryptedData, iv: ivStr } = detail
-        this.login({ encryptedData, ivStr })
+        this.loginWithPhone({ encryptedData, ivStr })
 
     },
-    login: async function ({ encryptedData, ivStr }) {
+    loginWithPhone: async function({ encryptedData, ivStr }) {
         let { code, nickName, headPic } = this.data
         const { data: { status, message, result } } = await wx.pro.request({
             url: `${http}/wx/maPhoneLogin`,
