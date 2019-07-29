@@ -9,7 +9,7 @@ Page({
         encryptedData: null,
     },
 
-    onLoad: async function() {
+    onLoad: async function () {
         const { authSetting } = await wx.pro.getSetting()
         if (authSetting['scope.userInfo']) {
             const { userInfo } = await wx.pro.getUserInfo()
@@ -22,12 +22,12 @@ Page({
             })
         }
     },
-    getPhoneNumber: function({ detail }) {
+    getPhoneNumber: function ({ detail }) {
         const { encryptedData, iv: ivStr } = detail
         this.login({ encryptedData, ivStr })
 
     },
-    login: async function({ encryptedData, ivStr }) {
+    login: async function ({ encryptedData, ivStr }) {
         let { code, nickName, headPic } = this.data
         const { data: { status, message, result } } = await wx.pro.request({
             url: `${http}/wx/maPhoneLogin`,
@@ -37,7 +37,8 @@ Page({
                 nickName,
                 headPic,
                 encryptedData,
-                ivStr
+                ivStr,
+                maNum: 3
             }
         })
 

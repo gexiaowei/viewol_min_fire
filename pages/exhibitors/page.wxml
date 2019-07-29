@@ -22,7 +22,7 @@
     <view class="page__bd">
         <view class="weui-panel weui-panel_access exhibitors">
             <view class="weui-panel__bd">
-                <navigator url="../web/page?url={{item.link}}" class="weui-media-box weui-media-box_appmsg item" hover-class="weui-cell_active" wx:for="{{company_list}}" wx:key="id">
+                <navigator url="../web/page?url={{item.link}}&title={{item.name||'展商秀'}}" class="weui-media-box weui-media-box_appmsg item" hover-class="weui-cell_active" wx:for="{{company_list}}" wx:key="id">
                     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
                         <image class="weui-media-box__thumb" src="{{item.logoView}}" mode="sacleToFit" lazy-load="{{true}}" />
                     </view>

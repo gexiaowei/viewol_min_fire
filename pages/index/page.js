@@ -16,7 +16,7 @@ Page({
         }
     },
 
-    onLoad: function({ scene }) {
+    onLoad: function ({ scene }) {
         const user_id = wx.getStorageSync('uid')
         if (!user_id && !globalData.uid) {
             wx.navigateTo({
@@ -35,9 +35,7 @@ Page({
             const [type, id] = scene.split(':')
             switch ('' + type) {
                 case '11':
-                    wx.navigateTo({
-                        url: '../web/page?url=' + encodeURIComponent(`https://www.view-ol.com/zsx/?company_id=${id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
-                    })
+                    this.getCompanyInfo(id)
                     break;
                 case '12':
                     wx.navigateTo({
@@ -50,14 +48,34 @@ Page({
         }
     },
 
-    goExhibitors: function(event) {
+    goExhibitors: function (event) {
         globalData.firefighting_exhibitors_award = event.currentTarget.dataset.award
         wx.switchTab({
             url: '../exhibitors/page',
         })
     },
 
-    getRecommentCompanyList: async function() {
+    getCompanyInfo: async function (id) {
+        const { data: { code, showInfo, result: { name } } } = await wx.pro.request({
+            url: `${http}/company/getCompany`,
+            method: 'GET',
+            data: {
+                id,
+                userId: globalData.uid
+            }
+        })
+        if (code === '0000') {
+            let link
+            if (showInfo) link = encodeURIComponent(`https://www.view-ol.com/zsx/?company_id=${id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+            else link = encodeURIComponent(`https://www.view-ol.com/zsx/?company_id=${id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}/#/detail`)
+
+            wx.navigateTo({
+                url: '../web/page?url=' + link + '&title=' + encodeURIComponent(name)
+            })
+        }
+    },
+
+    getRecommentCompanyList: async function () {
         const { data: { status, result = [], message } } = await wx.pro.request({
             url: `${http}/company/recommentCompanyList`,
             method: 'GET',
@@ -80,7 +98,7 @@ Page({
         }
     },
 
-    getProductCompanyList: async function() {
+    getProductCompanyList: async function () {
         const { data: { status, result = [], message } } = await wx.pro.request({
             url: `${http}/product/recommentProductList`,
             method: 'GET',
@@ -95,7 +113,7 @@ Page({
         }
     },
 
-    getNowRecommendSchedule: async function() {
+    getNowRecommendSchedule: async function () {
         const { data: { status, result = [], message } } = await wx.pro.request({
             url: `${http}/schedule/queryNowRecommendSchedule`,
             method: 'GET',
