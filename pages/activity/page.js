@@ -40,11 +40,13 @@ Page({
     },
 
     onShow: function() {
-        if (globalData.firefighting_activity_self != this.data.is_self) {
-            this.setData({ is_self: globalData.firefighting_activity_self })
-            if (globalData.firefighting_activity_self === 1) this.getSelfScheduleList()
-            else this.getScheduleList()
-        }
+        setTimeout(() => {
+            if (globalData.firefighting_activity_self != this.data.is_self) {
+                this.setData({ is_self: globalData.firefighting_activity_self })
+                if (globalData.firefighting_activity_self === 1) this.getSelfScheduleList()
+                else this.getScheduleList()
+            }
+        }, 500)
     },
 
     onTabItemTap(item) {

@@ -70,7 +70,7 @@ Page({
             else link = encodeURIComponent(`https://www.view-ol.com/zsx//#/detail?company_id=${id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
 
             wx.navigateTo({
-                url: '../web/page?url=' + link + '&title=' + encodeURIComponent(name)
+                url: '../web/page?url=' + link + '&title=' + encodeURIComponent(name) + '&sence=' + encodeURIComponent(`11:${id}`)
             })
         }
     },
@@ -85,7 +85,8 @@ Page({
         })
         if (status === '0000') {
             result.forEach(element => {
-                element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+                element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#detail/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+                element.sence = encodeURIComponent(`11:${element.id}`)
             })
             let tmp = util.chunk(result, 4)
             let data = []
@@ -125,5 +126,13 @@ Page({
         this.setData({
             recommend_schedule_list: result
         })
+    },
+
+    showWarning: function() {
+        wx.pro.showToast({
+            title: '敬请期待',
+            duration: 1500
+        });
+
     }
 })

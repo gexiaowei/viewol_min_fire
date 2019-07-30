@@ -73,6 +73,7 @@ Page({
             result.forEach(element => {
                 if (element.showInfo) element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
                 else element.link = encodeURIComponent(`https://www.view-ol.com/zsx//#/detail?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+                element.sence = encodeURIComponent(`11:${element.id}`)
             });
             this.setData({ company_list: is_replace ? result : company_list.concat(result) })
             if (result.length) this.setData({ lastSeq: result[result.length - 1]['seq'] })
