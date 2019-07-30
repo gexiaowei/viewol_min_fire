@@ -29,10 +29,10 @@
                 </view>
             </block>
             <block>
-                <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                <view bindtap="showWarning" class="weui-grid" hover-class="weui-grid_active">
                     <image class="weui-grid__icon" src="../../images/index/icon_5.png"></image>
                     <view class="weui-grid__label">展会服务</view>
-                </navigator>
+                </view>
             </block>
             <block>
                 <navigator url="/pages/activity/page" open-type="switchTab" class="weui-grid" hover-class="weui-grid_active">
