@@ -29,15 +29,15 @@
                 </view>
             </block>
             <block>
-                <view bindtap="showWarning" class="weui-grid" hover-class="weui-grid_active">
+                <navigator url="/pages/about/server" class="weui-grid" hover-class="weui-grid_active">
                     <image class="weui-grid__icon" src="../../images/index/icon_5.png"></image>
                     <view class="weui-grid__label">展会服务</view>
-                </view>
+                </navigator>
             </block>
             <block>
                 <navigator url="/pages/activity/page" open-type="switchTab" class="weui-grid" hover-class="weui-grid_active">
                     <image class="weui-grid__icon" src="../../images/index/icon_6.png"></image>
-                    <view class="weui-grid__label">企业论坛</view>
+                    <view class="weui-grid__label">展会论坛</view>
                 </navigator>
             </block>
             <block>

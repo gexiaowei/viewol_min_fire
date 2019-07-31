@@ -12,6 +12,7 @@
         "pages/my/page",
         "pages/tools/apply",
         "pages/about/page",
+        "pages/about/server",
         "pages/web/page"
     ],
     "window": {

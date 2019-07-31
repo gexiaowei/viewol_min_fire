@@ -1,0 +1,19 @@
+<view class="page">
+    <view class="page_bd">
+        <block wx:for="{{servers}}" wx:key="index">
+            <view class="title weui-flex">
+                <view class="arrow"></view>
+                <view class="arrow"></view>
+                <view class="name">{{item.title}}</view>
+                <view class="arrow flip"></view>
+                <view class="arrow flip"></view>
+            </view>
+            <view>
+                <view class="content" wx:for="{{item.content}}" wx:for-item="content">
+                    <view class="sub-title" wx:if="{{!!content.title}}">{{content.title}}</view>
+                    <view class="info" wx:for="{{content.info}}" wx:for-item="info">{{info}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
