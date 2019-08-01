@@ -12,8 +12,10 @@
                 <view class="content" wx:for="{{item.content}}" wx:for-item="content">
                     <view class="sub-title" wx:if="{{!!content.title}}">{{content.title}}</view>
                     <view class="info" wx:for="{{content.info}}" wx:for-item="info">{{info}}</view>
+                    <view class='line-css'></view>
                 </view>
             </view>
+            
         </block>
     </view>
 </view>

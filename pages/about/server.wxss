@@ -42,11 +42,26 @@
 }
 
 .sub-title {
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
 }
 
 .info {
-    margin-top: 20rpx;
+    font-size: 25rpx;
+    margin-top: 6rpx;
     word-break: break-all;
+}
+
+.line-css {
+width: 50%;
+
+height: 20rpx;
+
+border-right: 1rpx dashed #a7a8a8;
+/* height:1px;
+
+background: #888;
+
+margin:10 0rpx； */
+
 }
