@@ -62,6 +62,7 @@ Page({
             wx.setStorageSync('sid', result['sessionId'])
             globalData.uid = result.userId
             globalData.sessionId = result.sessionId
+            globalData.userJoin = result.userJoin
             wx.switchTab({ url: "../index/page" })
         } else {
             wx.pro.showToast({

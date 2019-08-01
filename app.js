@@ -11,6 +11,7 @@ App({
         uid: null,
         sessionId: null,
         expoId: 2,
+        userJoin: 1,
         firefighting_exhibitors_award: 0,
         firefighting_activity_self: 0,
         regeneratorRuntime

@@ -36,28 +36,41 @@ Page({
 
     onShow: function() {
         const { scene } = this.data
-        if (globalData.uid && scene) {
-            console.log('处理scene')
-            const [type, id] = decodeURIComponent(scene).split(':')
-            switch (type) {
-                case '11':
-                    this.getCompanyInfo(id)
-                    break;
-                case '12':
-                    wx.navigateTo({
-                        url: '../activity/detail?id=' + id
-                    })
-                    break;
-                case '13':
-                    wx.navigateTo({
-                        url: '../web/page?url=' + encodeURIComponent(globalData.sign_up_url) + '&title=报名'
-                    })
-                    break;
-                default:
-                    break;
+            //消费掉首次报名跳转
+        if (globalData.uid) {
+            if (scene) {
+                console.log('处理scene')
+                const [type, id] = decodeURIComponent(scene).split(':')
+                switch (type) {
+                    case '11':
+                        this.getCompanyInfo(id)
+                        break;
+                    case '12':
+                        wx.navigateTo({
+                            url: '../activity/detail?id=' + id
+                        })
+                        break;
+                    case '13':
+                        wx.navigateTo({
+                            url: '../web/page?url=' + encodeURIComponent(globalData.sign_up_url) + '&title=报名'
+                        })
+                        globalData.userJoin = 1
+                        break;
+                    default:
+                        break;
+                }
+                this.setData({ scene: null })
             }
-            this.setData({ scene: null })
+
+            //消费掉首次报名跳转
+            if (!globalData.userJoin) {
+                wx.navigateTo({
+                    url: '../web/page?url=' + encodeURIComponent(globalData.sign_up_url) + '&title=报名'
+                })
+                globalData.userJoin = 1
+            }
         }
+
     },
 
     goExhibitors: function(event) {
