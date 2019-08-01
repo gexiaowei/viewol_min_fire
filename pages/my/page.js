@@ -3,7 +3,7 @@ const { globalData, globalData: { http, regeneratorRuntime } } = getApp()
 
 Page({
     data: {
-        url: decodeURIComponent('https://service.ciec.com.cn/ciec_sw/modules/register/preRegm/91819/wechat/zh/n')
+        url: decodeURIComponent(globalData.sign_up_url)
     },
 
     onLoad: async function(options) {

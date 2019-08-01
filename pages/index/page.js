@@ -16,7 +16,7 @@ Page({
         }
     },
 
-    onLoad: function({ scene }) {
+    onLoad: function ({ scene }) {
         const user_id = wx.getStorageSync('uid')
         if (!user_id && !globalData.uid) {
             wx.navigateTo({
@@ -42,20 +42,25 @@ Page({
                         url: '../activity/detail?id=' + id
                     })
                     break;
+                case '13':
+                    wx.navigateTo({
+                        url: '../web/page?url=' + encodeURIComponent(globalData.sign_up_url) + '&title=报名'
+                    })
+                    break;
                 default:
                     break;
             }
         }
     },
 
-    goExhibitors: function(event) {
+    goExhibitors: function (event) {
         globalData.firefighting_exhibitors_award = event.currentTarget.dataset.award
         wx.switchTab({
             url: '../exhibitors/page',
         })
     },
 
-    getCompanyInfo: async function(id) {
+    getCompanyInfo: async function (id) {
         const { data: { code, showInfo, result: { name } } } = await wx.pro.request({
             url: `${http}/company/getCompany`,
             method: 'GET',
@@ -75,7 +80,7 @@ Page({
         }
     },
 
-    getRecommentCompanyList: async function() {
+    getRecommentCompanyList: async function () {
         const { data: { status, result = [], message } } = await wx.pro.request({
             url: `${http}/company/recommentCompanyList`,
             method: 'GET',
@@ -99,7 +104,7 @@ Page({
         }
     },
 
-    getProductCompanyList: async function() {
+    getProductCompanyList: async function () {
         const { data: { status, result = [], message } } = await wx.pro.request({
             url: `${http}/product/recommentProductList`,
             method: 'GET',
@@ -114,7 +119,7 @@ Page({
         }
     },
 
-    getNowRecommendSchedule: async function() {
+    getNowRecommendSchedule: async function () {
         const { data: { status, result = [], message } } = await wx.pro.request({
             url: `${http}/schedule/queryNowRecommendSchedule`,
             method: 'GET',
@@ -128,7 +133,7 @@ Page({
         })
     },
 
-    showWarning: function() {
+    showWarning: function () {
         wx.pro.showToast({
             title: '敬请期待',
             duration: 1500

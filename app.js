@@ -2,6 +2,7 @@ import regeneratorRuntime from '/utils/wxPromise.min.js'
 //app.js
 App({
     globalData: {
+        sign_up_url: 'https://service.ciec.com.cn/ciec_sw/modules/register/preRegm/91819/wechat/zh/n',
         userInfo: null,
         http: 'https://www.view-ol.com/viewol_web',
         web_http: 'https://www.view-ol.com/',

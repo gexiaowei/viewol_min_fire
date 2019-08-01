@@ -57,6 +57,13 @@
 					"scene": 1011
 				},
 				{
+					"id": 3,
+					"name": "报名页面",
+					"pathName": "pages/index/page",
+					"query": "scene=13",
+					"scene": 1035
+				},
+				{
 					"id": 2,
 					"name": "开发用",
 					"pathName": "pages/about/server",
