@@ -24,8 +24,6 @@ Page({
 
     onShow: function() {
         setTimeout(() => {
-            console.log("TCL: this.data.award", this.data.award)
-            console.log("TCL: globalData.firefighting_exhibitors_award", globalData.firefighting_exhibitors_award)
             if (this.data.award != globalData.firefighting_exhibitors_award) {
                 this.setData({ award: globalData.firefighting_exhibitors_award })
                 this.getCompanyList(true)

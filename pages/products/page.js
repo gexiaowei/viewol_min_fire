@@ -61,7 +61,6 @@ Page({
         }
 
         this.setData({ loadding: false })
-        console.log("TCL: this.data.loadding", this.data.loadding)
     },
 
     getCategoryList: async function() {

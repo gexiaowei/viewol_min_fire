@@ -17,7 +17,6 @@ Page({
         })
 
         if (status === '0000') {
-            console.log("TCL: result.applyStatus", result.applyStatus)
             this.setData({ info: result, applyStatus: +result.applyStatus })
             WxParse.wxParse('article', 'html', result.contentView, this, 5);
         }

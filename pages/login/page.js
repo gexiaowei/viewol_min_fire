@@ -12,29 +12,36 @@ Page({
 
     onLoad: async function() {
         const { authSetting } = await wx.pro.getSetting()
-        console.log("TCL: authSetting", authSetting)
         if (authSetting['scope.userInfo']) {
             this.setData({ auth: true })
             this.login()
         }
     },
-    login: async function() {
-        const { userInfo } = await wx.pro.getUserInfo()
-        const { code } = await wx.pro.login()
-        console.log("TCL: userInfo", userInfo)
-        this.setData({
-            code,
-            nickName: userInfo['nickName'],
-            headPic: userInfo['avatarUrl']
-        })
-    },
 
+    login: async function() {
+        try {
+            const { userInfo } = await wx.pro.getUserInfo()
+            const { code } = await wx.pro.login()
+            this.setData({
+                code,
+                nickName: userInfo['nickName'],
+                headPic: userInfo['avatarUrl']
+            })
+            this.setData({ auth: true })
+        } catch (error) {
+            wx.showToast({
+                icon: 'none',
+                title: '获取用户信息失败'
+            })
+        }
+    },
 
     getPhoneNumber: function({ detail }) {
         const { encryptedData, iv: ivStr } = detail
         this.loginWithPhone({ encryptedData, ivStr })
 
     },
+
     loginWithPhone: async function({ encryptedData, ivStr }) {
         let { code, nickName, headPic } = this.data
         const { data: { status, message, result } } = await wx.pro.request({
