@@ -30,14 +30,19 @@
                 <view class="left weui-flex">
                     <view class="point"></view>
                 </view>
-                <view class="weui-flex__item right">
-                    <view class="weui-flex">
-                        <text>主题</text>
-                        <text class="weui-flex__item desc">{{item.title}}</text>
+                <view class="weui-flex__item weui-flex right">
+                    <view class="weui-flex__item">
+                        <view class="weui-flex">
+                            <text>主题</text>
+                            <text class="weui-flex__item desc">{{item.title}}</text>
+                        </view>
+                        <view class="weui-flex">
+                            <text>位置</text>
+                            <text class="weui-flex__item desc">{{item.place}}</text>
+                        </view>
                     </view>
-                    <view class="weui-flex">
-                        <text>位置</text>
-                        <text class="weui-flex__item desc">{{item.place}}</text>
+                    <view class="weui-flex" style="align-items:center;">
+                        <image class="more" src="../../images/common/icon_next.png" />
                     </view>
                 </view>
             </navigator>

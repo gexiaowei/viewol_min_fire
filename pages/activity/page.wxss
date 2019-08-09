@@ -130,3 +130,8 @@
 .activity .right .desc {
     margin-left: 20rpx;
 }
+
+image.more{
+    width: 38rpx;
+    height:38rpx;
+}

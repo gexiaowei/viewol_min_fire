@@ -20,7 +20,7 @@
             <view class="weui-cell__hd">
                 <image src="../../images/my/icon_company.png" mode="widthFix" class="icon"></image>
             </view>
-            <view class="weui-cell__bd">公司</view>
+            <view class="weui-cell__bd">单位</view>
             <view class="weui-cell__ft">{{company}}</view>
         </view>
         <view class="weui-cell">
@@ -44,13 +44,13 @@
             <view class="weui-cell__bd">我参与的论坛</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
-        <navigator wx:if="{{companyId>0}}" url="../tools/apply?companyId={{companyId}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <!-- <navigator wx:if="{{companyId>0}}" url="../tools/apply?companyId={{companyId}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
                 <image src="../../images/my/icon_apply.png" mode="widthFix" class="icon"></image>
             </view>
             <view class="weui-cell__bd">论坛申请</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </navigator>
+        </navigator> -->
         <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
                 <image src="../../images/my/icon_share.png" mode="widthFix" class="icon"></image>

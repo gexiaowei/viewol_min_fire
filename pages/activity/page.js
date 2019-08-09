@@ -7,7 +7,12 @@ Page({
     data: {
         year: '2019',
         month: '10',
-        tabs: [{
+        tabs: [
+            {
+                week: '一',
+                date: 15,
+            },
+            {
                 week: '二',
                 date: 16,
             },
