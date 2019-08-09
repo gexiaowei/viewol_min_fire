@@ -9,23 +9,23 @@ Page({
         month: '10',
         tabs: [
             {
-                week: '一',
+                week: '二',
                 date: 15,
             },
             {
-                week: '二',
+                week: '三',
                 date: 16,
             },
             {
-                week: '三',
+                week: '四',
                 date: 17,
             },
             {
-                week: '四',
+                week: '五',
                 date: 18,
             },
             {
-                week: '五',
+                week: '六',
                 date: 19,
             },
         ],
