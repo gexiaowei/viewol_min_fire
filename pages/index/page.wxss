@@ -271,3 +271,8 @@
     color: white;
     font-size: 24rpx;
 }
+
+image.more{
+    width: 38rpx;
+    height:38rpx;
+}

@@ -62,7 +62,7 @@
     </view>
     <view class="active">
         <!-- <navigator url="../web/page?url={{video.link}}&title={{video.title}}"> -->
-            <video src="{{video.source}}" style="width:100%" autoplay="{{true}}" show-mute-btn="{{true}}" object-fit="fill"></video>
+        <video src="{{video.source}}" style="width:100%" autoplay="{{true}}" show-mute-btn="{{true}}" object-fit="fill"></video>
         <!-- </navigator> -->
     </view>
     <view class="time-line">
@@ -72,7 +72,7 @@
                     <view class="weui-cell__hd">
                         <image class="icon" src="../../images/index/icon_more.png"></image>
                     </view>
-                    <view class="weui-cell__bd">论坛</view>
+                    <view class="weui-cell__bd">活动日程</view>
                     <view class="weui-cell__ft weui-cell__ft_in-access more">查看更多</view>
                 </navigator>
             </view>
@@ -82,15 +82,20 @@
                         <image class="icon" src="../../images/common/icon_clock.png"></image>
                     </view>
                     <view class="weui-flex__item info">
-                        <view>
-                            <view class="time">
-                                <text>{{item.sTime}}</text>
+                        <view class="weui-flex">
+                            <view class="weui-flex__item">
+                                <view class="time">
+                                    <text>{{item.sTime}}</text>
+                                </view>
+                                <view class="topic">
+                                    <text>主题：{{item.title}}</text>
+                                </view>
+                                <view class="location">
+                                    <text>位置：{{item.place}}</text>
+                                </view>
                             </view>
-                            <view class="topic">
-                                <text>主题：{{item.title}}</text>
-                            </view>
-                            <view class="location">
-                                <text>位置：{{item.place}}</text>
+                            <view class="weui-flex" style="align-items:center;">
+                                <image class="more" src="../../images/common/icon_next.png" />
                             </view>
                         </view>
                     </view>

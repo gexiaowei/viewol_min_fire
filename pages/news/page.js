@@ -2,7 +2,7 @@ const { globalData: { http, regeneratorRuntime } } = getApp()
 Page({
     data: {
         imgUrls: [
-            '/images/index/active.png'
+            '/images/index/title.png'
         ],
         lastSeq: '',
         info_list: [],
