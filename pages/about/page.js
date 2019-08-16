@@ -31,12 +31,12 @@ Page({
                 content: [{
                         date: '10月13日-14日',
                         time: '9:00-17:00',
-                        content: '报道布展'
+                        content: '报到布展'
                     },
                     {
                         date: '10月15日',
                         time: '9:00-21:00',
-                        content: '报道布展'
+                        content: '报到布展'
                     },
                     {
                         date: '10月16日-10月18日',
