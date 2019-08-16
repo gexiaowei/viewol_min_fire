@@ -132,7 +132,7 @@
     <view class="product">
         <view class="content">
             <view class="weui-cells weui-cells_after-title normal-title">
-                <navigator url="/pages/products/page" open-type="switchTab" class="weui-cell weui-cell_access">
+                <navigator url="/pages/products/page" class="weui-cell weui-cell_access">
                     <view class="weui-cell__hd">
                         <image class="icon" src="../../images/index/icon_more.png"></image>
                     </view>
