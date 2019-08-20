@@ -2,7 +2,7 @@
 .page_hd {
     color: #2b3c4c;
     text-align: center;
-    padding: 31rpx;
+    padding: 15rpx;
 }
 
 .page_hd .title {
@@ -32,6 +32,10 @@
 
 .page_hd .place .icon image {
     width: 36rpx;
+}
+
+.page_bd .wxParse-p image {
+    max-width:100% !important;
 }
 
 .page_bd {
