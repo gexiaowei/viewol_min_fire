@@ -7,8 +7,7 @@ Page({
     data: {
         year: '2019',
         month: '10',
-        tabs: [
-            {
+        tabs: [{
                 week: '二',
                 date: 15,
             },
@@ -74,7 +73,8 @@ Page({
             data: {
                 expoId,
                 date: `${year}-${month}-${tabs[activeIndex]['date']}`,
-                num: 200
+                num: 200,
+                bbs: 1
             }
         })
 

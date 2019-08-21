@@ -6,6 +6,7 @@
         "pages/products/detail",
         "pages/exhibitors/page",
         "pages/activity/page",
+        "pages/activity/all",
         "pages/activity/detail",
         "pages/news/page",
         "pages/news/detail",

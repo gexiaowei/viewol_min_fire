@@ -1,0 +1,137 @@
+@import "../../weui.wxss";
+.weui-navbar {
+    background: #2661A7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.week {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 26rpx;
+}
+
+.date {
+    margin-top: 30rpx;
+    color: #FFFFFF;
+    font-size: 36rpx;
+    line-height: 55rpx;
+}
+
+.weui-bar__item_on .date {
+    color: #FFF223;
+    font-size: 55rpx;
+}
+
+.weui-navbar__slider {
+    width: 55rpx;
+    background-color: #FFF223;
+}
+
+.content {
+    background: #CEDCEB;
+    padding: 200rpx 30rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.content.self {
+    padding-top: 20rpx;
+}
+
+.month {
+    color: #094A8A;
+    font-size: 60rpx;
+}
+
+.year {
+    color: #094A8A;
+    font-size: 30rpx;
+}
+
+.time-container {
+    margin-top: 6rpx;
+}
+
+.left {
+    width: 49rpx;
+}
+
+.left image {
+    width: 49rpx;
+    height: 49rpx;
+}
+
+.right {
+    margin-left: 24rpx;
+}
+
+.right .time {
+    color: #094A8A;
+    font-size: 32rpx;
+}
+
+.activity .left {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity .left::before {
+    content: "";
+    position: absolute;
+    width: 2rpx;
+    left: calc(50% - 1rpx);
+    top: -8rpx;
+    height: 50%;
+    background: #A3C2E1;
+}
+
+.activity .left::after {
+    content: "";
+    position: absolute;
+    width: 2rpx;
+    left: calc(50% - 1rpx);
+    bottom: -8rpx;
+    height: 50%;
+    background: #A3C2E1;
+}
+
+.activity .left .point {
+    width: 12rpx;
+    height: 12rpx;
+    background: #3871B0;
+    border-radius: 12rpx;
+}
+
+.activity .right {
+    position: relative;
+    color: #2B3C4C;
+    font-size: 30rpx;
+    background: white;
+    padding: 32rpx 30rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+}
+
+.activity .right::before {
+    content: "";
+    position: absolute;
+    left: -18rpx;
+    top: calc(50% - 20rpx);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.activity .right .desc {
+    margin-left: 20rpx;
+}
+
+image.more {
+    width: 38rpx;
+    height: 38rpx;
+}

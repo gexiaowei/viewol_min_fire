@@ -35,11 +35,7 @@
 }
 
 .page_bd .wxParse-p image {
-    max-width:100% !important;
-}
-
-.page_bd {
-    padding: 31rpx;
+    width: 100% !important;
 }
 
 .page_bd .wxParse-p {

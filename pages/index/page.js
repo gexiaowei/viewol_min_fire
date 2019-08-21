@@ -111,8 +111,8 @@ Page({
         if (status === '0000') {
             result.forEach(element => {
 
-              if (element.showInfo) element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
-              else element.link = encodeURIComponent(`https://www.view-ol.com/zsx//#/detail?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+                if (element.showInfo) element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+                else element.link = encodeURIComponent(`https://www.view-ol.com/zsx//#/detail?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
 
                 element.sence = encodeURIComponent(`11:${element.id}`)
             })
@@ -159,6 +159,7 @@ Page({
     showWarning: function() {
         wx.pro.showToast({
             title: '敬请期待',
+            icon: 'none',
             duration: 1500
         });
 

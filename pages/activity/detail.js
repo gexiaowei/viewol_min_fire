@@ -39,5 +39,18 @@ Page({
         if (status === '0000') {
             this.setData({ applyStatus: 2 })
         }
+    },
+    onShareAppMessage: function(res) {
+        return {
+            title: this.data.info.title,
+            path: `pages/activity/detail?id=${this.data.id}`,
+            success: (shareTickets) => {
+                console.info(shareTickets + '成功');
+            },
+            fail: function(res) {
+                console.log(res + '失败');
+                // 转发失败
+            }
+        }
     }
 })
