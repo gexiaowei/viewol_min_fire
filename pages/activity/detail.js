@@ -3,13 +3,13 @@ const { globalData, globalData: { http, regeneratorRuntime } } = getApp()
 
 Page({
     data: {},
-    onLoad: function(option) {
+    onLoad: function (option) {
         const { id } = option
-        this.setData({ id })
+        this.setData({ id, activity_url: `https://www.view-ol.com/zsx/#/activity?activity_id=${id}&user_id=${globalData.uid}` })
         this.getActivityInformation(id)
     },
 
-    getActivityInformation: async function(id) {
+    getActivityInformation: async function (id) {
         const { data: { status, message, result } } = await wx.pro.request({
             url: `${http}/schedule/getSchedule`,
             method: 'GET',
@@ -18,10 +18,9 @@ Page({
 
         if (status === '0000') {
             this.setData({ info: result, applyStatus: +result.applyStatus })
-            WxParse.wxParse('article', 'html', result.contentView, this, 5);
         }
     },
-    applyJoin: async function() {
+    applyJoin: async function () {
         const { id } = this.data
         const { data: { status, message } } = await wx.pro.request({
             url: `${http}/schedule/applyJoin`,
@@ -40,14 +39,14 @@ Page({
             this.setData({ applyStatus: 2 })
         }
     },
-    onShareAppMessage: function(res) {
+    onShareAppMessage: function (res) {
         return {
             title: this.data.info.title,
             path: `pages/index/page?scene=12:${this.data.id}`,
             success: (shareTickets) => {
                 console.info(shareTickets + '成功');
             },
-            fail: function(res) {
+            fail: function (res) {
                 console.log(res + '失败');
                 // 转发失败
             }

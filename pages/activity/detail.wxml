@@ -1,5 +1,2 @@
-<import src="../../wxParse/wxParse.wxml" />
-<view class="page_bd">
-    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
-</view>
+<web-view src="{{activity_url}}"></web-view>
 <view class="page_fd" wx:if="{{applyStatus!==2}}" bindtap="applyJoin">立即报名</view>

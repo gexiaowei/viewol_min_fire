@@ -92,7 +92,7 @@ Page({
         if (code === '0000') {
             let link
             if (showInfo) link = encodeURIComponent(`https://www.view-ol.com/zsx/#/?company_id=${id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
-            else link = encodeURIComponent(`https://www.view-ol.com/zsx//#/detail?company_id=${id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+            else link = encodeURIComponent(`https://www.view-ol.com/zsx/#/detail?company_id=${id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
 
             wx.navigateTo({
                 url: '../web/page?url=' + link + '&title=' + encodeURIComponent(name) + '&sence=' + encodeURIComponent(`11:${id}`)
@@ -112,7 +112,7 @@ Page({
             result.forEach(element => {
 
                 if (element.showInfo) element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#/?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
-                else element.link = encodeURIComponent(`https://www.view-ol.com/zsx//#/detail?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
+                else element.link = encodeURIComponent(`https://www.view-ol.com/zsx/#/detail?company_id=${element.id}&user_id=${globalData.uid}&expo_id=${globalData.expoId}`)
 
                 element.sence = encodeURIComponent(`11:${element.id}`)
             })
