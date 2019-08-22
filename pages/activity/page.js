@@ -74,7 +74,7 @@ Page({
                 expoId,
                 date: `${year}-${month}-${tabs[activeIndex]['date']}`,
                 num: 200,
-                bbs: 1
+                bbs: 0
             }
         })
 

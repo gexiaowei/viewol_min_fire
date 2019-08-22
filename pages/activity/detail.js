@@ -43,7 +43,7 @@ Page({
     onShareAppMessage: function(res) {
         return {
             title: this.data.info.title,
-            path: `pages/activity/detail?id=${this.data.id}`,
+            path: `pages/index/page?scene=12:${this.data.id}`,
             success: (shareTickets) => {
                 console.info(shareTickets + '成功');
             },
