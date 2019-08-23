@@ -5,49 +5,49 @@
     <view class="page__bd">
         <view class="weui-grids grid">
             <block>
-                <navigator url="../about/page" class="weui-grid">
+                <navigator url="../about/page" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_1.png"></image>
                     <view class="weui-grid__label">展会概况</view>
                 </navigator>
             </block>
             <block>
-                <navigator url="/pages/news/page" class="weui-grid">
+                <navigator url="/pages/news/page" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_2.png"></image>
                     <view class="weui-grid__label">行业快讯</view>
                 </navigator>
             </block>
             <block>
-                <navigator url="/pages/products/page" class="weui-grid">
+                <navigator url="/pages/products/page" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_3.png"></image>
                     <view class="weui-grid__label">产品查询</view>
                 </navigator>
             </block>
             <block>
-                <view bindtap="goExhibitors" data-award="0" class="weui-grid">
+                <view bindtap="goExhibitors" data-award="0" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_4.png"></image>
                     <view class="weui-grid__label">展商秀</view>
                 </view>
             </block>
             <block>
-                <navigator url="/pages/about/server" class="weui-grid">
+                <navigator url="/pages/about/server" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_5.png"></image>
                     <view class="weui-grid__label">展会服务</view>
                 </navigator>
             </block>
             <block>
-                <navigator url="/pages/activity/all" class="weui-grid">
+                <navigator url="/pages/activity/all" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_6.png"></image>
                     <view class="weui-grid__label">展会论坛</view>
                 </navigator>
             </block>
             <block>
-                <view bindtap="goExhibitors" data-award="1" class="weui-grid">
+                <view bindtap="goExhibitors" data-award="1" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_7.png"></image>
                     <view class="weui-grid__label">诚信企业</view>
                 </view>
             </block>
             <block>
-                <view bindtap="showWarning" class="weui-grid">
+                <view bindtap="showWarning" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_8.png"></image>
                     <view class="weui-grid__label">线上展会</view>
                 </view>
@@ -68,7 +68,7 @@
     <view class="time-line">
         <view class="content">
             <view class="weui-cells weui-cells_after-title normal-title">
-                <navigator url="/pages/activity/page" open-type="switchTab" class="weui-cell weui-cell_access">
+                <navigator url="/pages/activity/page" open-type="switchTab" class="weui-cell weui-cell_access"  hover-class="none">
                     <view class="weui-cell__hd">
                         <image class="icon" src="../../images/index/icon_more.png"></image>
                     </view>
@@ -106,7 +106,7 @@
     <view class="exhibitors">
         <view class="content">
             <view class="weui-cells weui-cells_after-title normal-title">
-                <navigator url="/pages/exhibitors/page" open-type="switchTab" class="weui-cell weui-cell_access">
+                <navigator url="/pages/exhibitors/page" open-type="switchTab" class="weui-cell weui-cell_access"  hover-class="none">
                     <view class="weui-cell__hd">
                         <image class="icon" src="../../images/index/icon_more.png"></image>
                     </view>
@@ -132,7 +132,7 @@
     <view class="product">
         <view class="content">
             <view class="weui-cells weui-cells_after-title normal-title">
-                <navigator url="/pages/products/page" class="weui-cell weui-cell_access">
+                <navigator url="/pages/products/page" class="weui-cell weui-cell_access" hover-class="none">
                     <view class="weui-cell__hd">
                         <image class="icon" src="../../images/index/icon_more.png"></image>
                     </view>
