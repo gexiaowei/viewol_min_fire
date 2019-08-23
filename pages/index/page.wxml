@@ -77,7 +77,7 @@
                 </navigator>
             </view>
             <view class="events">
-                <navigator url="/pages/activity/detail?id={{item.id}}" class="weui-flex item" wx:for="{{recommend_schedule_list}}" wx:key="id">
+                <navigator url="/pages/activity/detail?id={{item.id}}" class="weui-flex item" hover-class="none" wx:for="{{recommend_schedule_list}}" wx:key="id">
                     <view class="icon-container">
                         <image class="icon" src="../../images/common/icon_clock.png"></image>
                     </view>
