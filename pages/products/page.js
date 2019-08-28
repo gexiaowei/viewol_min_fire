@@ -30,7 +30,7 @@ Page({
 
     changeCategory: function(event) {
         const id = event.detail.value
-        this.setData({ categoryId: id })
+      this.setData({ categoryId: this.data.category_list[id]["id"] })
         this.getProductList(true)
     },
 
@@ -73,6 +73,7 @@ Page({
         })
 
         if (status === '0000') {
+            
             this.setData({ category_list: result })
         }
     }
