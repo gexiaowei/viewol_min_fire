@@ -1,2 +1,2 @@
 <web-view src="{{activity_url}}"></web-view>
-<view class="page_fd" wx:if="{{applyStatus!==2}}" bindtap="applyJoin">立即报名</view>
+<cover-view class="page_fd" wx:if="{{applyStatus!==2}}" bindtap="applyJoin">立即报名</cover-view>

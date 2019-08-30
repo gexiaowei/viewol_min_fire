@@ -53,10 +53,10 @@
                 </view>
             </block>
             <block>
-                <view bindtap="showWarning" class="weui-grid">
+                <navigator url="/pages/products/page?award=1" class="weui-grid">
                     <image class="weui-grid__icon" src="../../images/index/icon_9.png"></image>
                     <view class="weui-grid__label">创新产品</view>
-                </view>
+                </navigator>
             </block>
         </view>
     </view>

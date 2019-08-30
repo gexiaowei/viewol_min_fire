@@ -74,6 +74,7 @@
 .product .item .title {
     font-size: 30rpx;
     color: rgba(51, 51, 51, 1);
+    align-items: center;
 }
 
 .product .item .desc {
