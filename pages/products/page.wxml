@@ -10,7 +10,7 @@
                 </view>
             </view>
             <view class="type-container">
-                <picker bindchange="changeCategory" value="id" range-key="name" range="{{category_list}}">
+                <picker bindchange="changeCategory" value="{{id}}" range-key="name" range="{{category_list}}">
                     <view class="picker">
                         <text>分类</text>
                         <image src="../../images/common/icon_type.png" mode="widthFix"></image>

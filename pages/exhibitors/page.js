@@ -42,7 +42,7 @@ Page({
 
     changeCategory: function(event) {
         const id = event.detail.value
-        this.setData({ categoryId: id })
+      this.setData({ categoryId: this.data.category_list[id]["id"]  })
         this.getCompanyList(true)
     },
 

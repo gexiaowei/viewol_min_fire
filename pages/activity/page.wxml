@@ -26,7 +26,7 @@
                     <view class="time">{{key}}</view>
                 </view>
             </view>
-            <navigator url="/pages/activity/detail?id={{item.id}}" class="weui-flex activity" wx:for="{{value}}" wx:key="id">
+            <navigator url="/pages/activity/detail?id={{item.id}}" class="weui-flex activity"  hover-class="none" wx:for="{{value}}" wx:key="id">
                 <view class="left weui-flex">
                     <view class="point"></view>
                 </view>
