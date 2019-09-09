@@ -47,10 +47,12 @@
                 </view>
             </block>
             <block>
-                <view bindtap="showWarning" class="weui-grid" hover-class="none">
+            <navigator url="/pages/web/page?url={{web_url}}&title=线上展会" class="weui-grid" hover-class="none">
+                <!-- <view  class="weui-grid" hover-class="none"> -->
                     <image class="weui-grid__icon" src="../../images/index/icon_8.png"></image>
                     <view class="weui-grid__label">线上展会</view>
-                </view>
+                <!-- </view> -->
+            </navigator>
             </block>
             <block>
                 <navigator url="/pages/products/page?award=1" class="weui-grid">
