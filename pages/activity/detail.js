@@ -21,6 +21,16 @@ Page({
         }
     },
     applyJoin: async function () {
+      var pages = getCurrentPages();
+      const user_id = wx.getStorageSync('uid')
+      console.log("pages:" + pages[pages.length - 2])
+      if (!user_id && !globalData.uid) {
+        wx.navigateTo({
+          url: '../login/page'
+        })
+        return
+      }
+
         const { id } = this.data
         const { data: { status, message } } = await wx.pro.request({
             url: `${http}/schedule/applyJoin`,

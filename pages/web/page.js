@@ -6,7 +6,15 @@ Page({
         title: null,
         sence: null
     },
-
+  onShow: async function () {
+    const user_id = wx.getStorageSync('uid')
+    if (!user_id && !globalData.uid) {
+      wx.navigateTo({
+        url: '../login/page'
+      })
+    }
+  },
+    
     onLoad: async function({ url, title, sence }) {
         if (title) {
             const decode_title = decodeURIComponent(title);

@@ -51,12 +51,12 @@
             <view class="weui-cell__bd">论坛申请</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator> -->
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
                 <image src="../../images/my/icon_share.png" mode="widthFix" class="icon"></image>
             </view>
             <view class="weui-cell__bd">图片分享</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </navigator>
+        </navigator> -->
     </view>
 </view>

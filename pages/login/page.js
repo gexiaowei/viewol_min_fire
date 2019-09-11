@@ -31,10 +31,13 @@ Page({
         } catch (error) {
             wx.showToast({
                 icon: 'none',
-                title: '获取用户信息失败'
+                title: '请先登录，再进行操作'
             })
         }
     },
+  channel: async function () {
+    wx.switchTab({ url: "../index/page" })
+  },
 
     getPhoneNumber: function({ detail }) {
         const { encryptedData, iv: ivStr } = detail
@@ -63,7 +66,10 @@ Page({
             globalData.uid = result.userId
             globalData.sessionId = result.sessionId
             globalData.userJoin = result.userJoin
-            wx.switchTab({ url: "../index/page" })
+            // wx.switchTab({ url: "../index/page" })
+            wx.navigateBack({
+              delta: 1
+            })
         } else {
             wx.pro.showToast({
                 icon: 'none',

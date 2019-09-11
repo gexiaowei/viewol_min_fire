@@ -20,16 +20,16 @@ Page({
 
     onLoad: function({ scene = '' }) {
         if (scene) this.setData({ scene })
-        const user_id = wx.getStorageSync('uid')
-        if (!user_id && !globalData.uid) {
-            wx.navigateTo({
-                url: '../login/page?scene=' + encodeURIComponent(scene)
-            })
-        } else {
-            const session_id = wx.getStorageSync('sid')
-            globalData.uid = user_id
-            globalData.sid = session_id
-        }
+        // const user_id = wx.getStorageSync('uid')
+        // if (!user_id && !globalData.uid) {
+        //     wx.navigateTo({
+        //         url: '../login/page?scene=' + encodeURIComponent(scene)
+        //     })
+        // } else {
+        //     const session_id = wx.getStorageSync('sid')
+        //     globalData.uid = user_id
+        //     globalData.sid = session_id
+        // }
         this.getRecommentCompanyList()
         this.getProductCompanyList()
         this.getNowRecommendSchedule()
