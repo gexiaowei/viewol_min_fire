@@ -1,9 +1,15 @@
 import regeneratorRuntime from '/utils/wxPromise.min.js'
 //app.js
 App({
+    onLaunch: function (options) {
+        const user_id = wx.getStorageSync('uid')
+        if (user_id && user_id > 0) {
+            this.globalData.uid = user_id
+        }
+    },
     globalData: {
         sign_up_url: 'https://service.ciec.com.cn/ciec_sw/modules/register/preRegm/91819/wechat/zh/n',
-        video_url:'https://home.aiyaopai.com/xiaofangzhanlanhui/index.html',
+        video_url: 'https://home.aiyaopai.com/xiaofangzhanlanhui/index.html',
         userInfo: null,
         http: 'https://www.view-ol.com/viewol_web',
         web_http: 'https://www.view-ol.com/',
