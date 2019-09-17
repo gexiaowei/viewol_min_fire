@@ -73,6 +73,7 @@
 
 .exhibitors .item .title {
     font-size: 30rpx;
+    align-items: center;
     color: rgba(51, 51, 51, 1);
 }
 

@@ -27,7 +27,12 @@
                         <image class="weui-media-box__thumb" src="{{item.logoView}}" mode="aspectFit" lazy-load="{{true}}" />
                     </view>
                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title title">{{item.name}}</view>
+                        <view class="weui-media-box__title weui-flex title">
+                            <view>{{item.name}}</view>
+                        </view>
+                        <view>
+                            <image wx:if="{{!!award}}" style="height:30rpx;width:80rpx;" src="../../images/common/icon_apply.jpg" />
+                        </view>
                         <view class="weui-media-box__desc desc">{{item.content}}</view>
                     </view>
                 </navigator>
