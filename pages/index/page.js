@@ -21,7 +21,7 @@ Page({
     onLoad: function({ scene = '' }) {
         if (scene) this.setData({ scene })
         const user_id = wx.getStorageSync('uid')
-        if (!user_id && user_id>0){
+        if (user_id && user_id>0){
           globalData.uid = user_id
         }
         // const user_id = wx.getStorageSync('uid')
