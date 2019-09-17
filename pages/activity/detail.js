@@ -17,14 +17,14 @@ Page({
         })
 
         if (status === '0000') {
-            this.setData({ info: result, applyStatus: +result.applyStatus })
+            this.setData({ info: result, applyStatus: result.applyStatus })
         }
     },
     applyJoin: async function () {
       var pages = getCurrentPages();
       const user_id = wx.getStorageSync('uid')
       console.log("pages:" + pages[pages.length - 2])
-      if (!user_id && !globalData.uid) {
+      if (!user_id) {
         wx.navigateTo({
           url: '../login/page'
         })

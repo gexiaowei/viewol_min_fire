@@ -8,7 +8,7 @@ Page({
     },
   onShow: async function () {
     const user_id = wx.getStorageSync('uid')
-    if (!user_id && !globalData.uid) {
+    if (!user_id) {
       wx.navigateTo({
         url: '../login/page'
       })

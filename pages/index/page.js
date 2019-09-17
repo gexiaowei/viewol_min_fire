@@ -20,6 +20,10 @@ Page({
 
     onLoad: function({ scene = '' }) {
         if (scene) this.setData({ scene })
+        const user_id = wx.getStorageSync('uid')
+        if (!user_id && user_id>0){
+          globalData.uid = user_id
+        }
         // const user_id = wx.getStorageSync('uid')
         // if (!user_id && !globalData.uid) {
         //     wx.navigateTo({
@@ -38,7 +42,7 @@ Page({
     onShow: function() {
         const { scene } = this.data
             //消费掉首次报名跳转
-        if (globalData.uid) {
+        if (true) {
             if (scene) {
                 console.log('处理scene')
                 const [type, id] = decodeURIComponent(scene).split(':')
