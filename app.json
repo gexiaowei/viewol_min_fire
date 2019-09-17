@@ -5,6 +5,7 @@
         "pages/products/page",
         "pages/products/detail",
         "pages/exhibitors/page",
+        "pages/exhibitors/honesty",
         "pages/activity/page",
         "pages/activity/all",
         "pages/activity/detail",

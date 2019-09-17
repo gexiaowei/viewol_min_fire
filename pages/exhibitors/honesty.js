@@ -1,8 +1,9 @@
 const { globalData, globalData: { http, expoId, regeneratorRuntime } } = getApp()
 
 Page({
+
     data: {
-        award: 0,
+        award: 1,
         category_list: [],
         company_list: [],
         lastSeq: '',
@@ -10,7 +11,7 @@ Page({
         loadding: false,
         showModalStatus: false
     },
-
+  
     onLoad: function (options) {
         this.getCategoryList()
     },
@@ -21,10 +22,6 @@ Page({
 
     onReachBottom: function () {
         this.getCompanyList()
-    },
-
-    onTabItemTap(item) {
-        globalData.firefighting_exhibitors_award = 0
     },
 
     changeCategory: function (event) {

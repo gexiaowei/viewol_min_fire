@@ -23,10 +23,10 @@
                 </navigator>
             </block>
             <block>
-                <view bindtap="goExhibitors" data-award="0" class="weui-grid" hover-class="none">
+                <navigator url="/pages/exhibitors/page" open-type="switchTab" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_4.png"></image>
                     <view class="weui-grid__label">展商秀</view>
-                </view>
+                </navigator>
             </block>
             <block>
                 <navigator url="/pages/about/server" class="weui-grid" hover-class="none">
@@ -41,10 +41,10 @@
                 </navigator>
             </block>
             <block>
-                <view bindtap="goExhibitors" data-award="1" class="weui-grid" hover-class="none">
+                <navigator url="/pages/exhibitors/honesty" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_7.png"></image>
                     <view class="weui-grid__label">诚信企业</view>
-                </view>
+                </navigator>
             </block>
             <block>
             <navigator url="/pages/web/page?url={{web_url}}&title=线上展会" class="weui-grid" hover-class="none">
@@ -55,7 +55,7 @@
             </navigator>
             </block>
             <block>
-                <navigator url="/pages/products/page?award=1" class="weui-grid">
+                <navigator url="/pages/products/page?award=1" class="weui-grid" hover-class="none">
                     <image class="weui-grid__icon" src="../../images/index/icon_9.png"></image>
                     <view class="weui-grid__label">创新产品</view>
                 </navigator>

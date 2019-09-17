@@ -1,0 +1,46 @@
+<view class="page exhibitors-container">
+    <view class="page__hd">
+        <view class="weui-flex">
+            <view class="weui-flex__item weui-flex search-container">
+                <view>
+                    <image class="" src="../../images/common/icon_search.png" mode="widthFix" />
+                </view>
+                <view class="weui-flex__item">
+                    <input type="text" placeholder-class="phcolor" class="weui-search-bar__input search" placeholder="请输入展商名称" confirm-type="search" bindconfirm="changeKeyword" />
+                </view>
+            </view>
+            <view class="type-container">
+                <picker bindchange="changeCategory" value="id" range-key="name" range="{{category_list}}">
+                    <view class="picker">
+                        <text>分类</text>
+                        <image src="../../images/common/icon_type.png" mode="widthFix"></image>
+                    </view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access exhibitors">
+            <view class="weui-panel__bd">
+                <navigator url="../web/page?url={{item.link}}&title={{item.name||'展商秀'}}&sence={{item.sence}}" class="weui-media-box weui-media-box_appmsg item" hover-class="weui-cell_active" wx:for="{{company_list}}" wx:key="id">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
+                        <image class="weui-media-box__thumb" src="{{item.logoView}}" mode="aspectFit" lazy-load="{{true}}" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title weui-flex title">
+                            <view>{{item.name}}</view>
+                        </view>
+                        <view>
+                            <image wx:if="{{!!award}}" style="height:30rpx;width:80rpx;" src="../../images/common/icon_apply.jpg" />
+                        </view>
+                        <view class="weui-media-box__desc desc">{{item.content}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <view wx:if="{{loadding}}" class="weui-loadmore">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+    </view>
+</view>
