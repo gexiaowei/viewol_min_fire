@@ -7,8 +7,10 @@ Page({
         sence: null
     },
   onShow: async function () {
+    const version = wx.getStorageSync('version')
     const user_id = wx.getStorageSync('uid')
-    if (!user_id) {
+    if (!user_id || !version) {
+      wx.setStorageSync('version','1')
       wx.navigateTo({
         url: '../login/page'
       })

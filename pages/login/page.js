@@ -66,10 +66,17 @@ Page({
             globalData.uid = result.userId
             globalData.sessionId = result.sessionId
             globalData.userJoin = result.userJoin
+          if (result.userJoin==0){
+            wx.redirectTo({
+                url: '../web/page?url=' + encodeURIComponent(globalData.sign_up_url) + '&title=报名'
+              })
+            }else{
+              wx.navigateBack({
+                delta: 1
+              })
+            }
             // wx.switchTab({ url: "../index/page" })
-            wx.navigateBack({
-              delta: 1
-            })
+            
         } else {
             wx.pro.showToast({
                 icon: 'none',
