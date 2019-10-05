@@ -69,7 +69,7 @@ Page({
             url: `${http}/category/listCategory`,
             method: 'GET',
             data: {
-                parentId: '0003'
+                parentId: '0005'
             }
         })
 
