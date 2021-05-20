@@ -63,6 +63,12 @@
           "pathName": "pages/products/page",
           "query": "award=1",
           "scene": null
+        },
+        {
+          "name": "日程",
+          "pathName": "pages/activity/page",
+          "query": "",
+          "scene": null
         }
       ]
     }
