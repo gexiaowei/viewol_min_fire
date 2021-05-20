@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -42,6 +43,12 @@
         {
           "name": "关于",
           "pathName": "pages/about/page",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "展会论坛",
+          "pathName": "pages/activity/all",
           "scene": null
         }
       ]

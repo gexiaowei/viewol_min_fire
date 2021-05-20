@@ -1,34 +1,68 @@
-<view class="content {{is_self===0?'':'self'}}">
-    <view class="list">
-        <view class="item" wx:for="{{schedule_list}}" wx:for-index="key" wx:for-item="value" wx:key="key">
-            <view class="weui-flex time-container">
-                <view class="left">
-                    <image src="../../images/common/icon_clock.png" mode="widthFix" />
-                </view>
-                <view class="weui-flex__item right">
-                    <view class="time">{{key}}</view>
-                </view>
-            </view>
-            <navigator url="/pages/activity/detail?id={{item.id}}" class="weui-flex activity"  hover-class="none" wx:for="{{value}}" wx:key="id">
-                <view class="left weui-flex">
-                    <view class="point"></view>
-                </view>
-                <view class="weui-flex__item weui-flex right">
-                    <view class="weui-flex__item">
-                        <view class="weui-flex">
-                            <text>主题</text>
-                            <text class="weui-flex__item desc">{{item.title}}</text>
-                        </view>
-                        <view class="weui-flex">
-                            <text>位置</text>
-                            <text class="weui-flex__item desc">{{item.place}}</text>
-                        </view>
-                    </view>
-                    <view class="weui-flex" style="align-items:center;">
-                        <image class="more" src="../../images/common/icon_next.png" />
-                    </view>
-                </view>
-            </navigator>
-        </view>
+<view class="all-container">
+  <image
+    src="../../images/nav.png"
+    mode="widthFix"
+    class="w-100 "
+  ></image>
+  <view class="page_bd">
+    <view class="title weui-flex">
+      <view class="name">时间安排</view>
+      <view class="sub-title">TIME ARRANGEMENT</view>
+      <view class="text-center background-image">
+        <image src="../../images/about/bakground_title.png" mode="widthFix" />
+      </view>
     </view>
+    <view class="list-container {{is_self===0?'':'self'}}">
+      <view
+        class="item"
+        wx:for="{{schedule_list}}"
+        wx:for-index="key"
+        wx:for-item="value"
+        wx:key="key"
+      >
+        <view class="weui-flex time-container">
+          <view class="left">
+            <image src="../../images/common/icon_clock.png" mode="widthFix" />
+          </view>
+          <view class="weui-flex__item right">
+            <view class="time">{{key}}</view>
+          </view>
+        </view>
+        <navigator
+          url="/pages/activity/detail?id={{item.id}}"
+          class="weui-flex activity"
+          hover-class="none"
+          wx:for="{{value}}"
+          wx:key="id"
+        >
+          <view class="left weui-flex">
+            <view class="point">
+              <image
+                class=""
+                src="../../images/common/icon_arrow_right.png"
+                mode="widthFix"
+              />
+            </view>
+          </view>
+          <view class="weui-flex__item weui-flex right">
+            <view class="weui-flex__item">
+              <view class="weui-flex">
+                <text>主题</text>
+                <text class="weui-flex__item desc">{{item.title}}</text>
+              </view>
+              <view class="weui-flex">
+                <text>位置</text>
+                <text class="weui-flex__item desc">{{item.place}}</text>
+              </view>
+            </view>
+            <view class="weui-flex" style="align-items:center;">
+              <image class="more" src="../../images/common/icon_next.png" />
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
 </view>
+
