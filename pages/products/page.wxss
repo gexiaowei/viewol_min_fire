@@ -1,118 +1,116 @@
-@import "../../weui.wxss";
+@import '../../weui.wxss';
 .page__hd {
-    padding: 30rpx 0;
-}
-
-.search-container {
-    background: white;
-    border-radius: 60rpx;
-    padding: 0 20rpx;
-    align-items: center;
-}
-
-.search-container image {
-    width: 26rpx;
-}
-
-.search {
-    padding: 10rpx;
-    font-size: 28rpx;
+  padding: 30rpx 0;
 }
 
 .phcolor {
-    color: #2661A7;
-}
-
-.type-container {
-    margin-left: 30rpx;
-}
-
-.type-container picker {
-    background: white;
-    border-radius: 60rpx;
-    color: #2A64A9;
-    font-size: 28rpx;
-    padding: 16rpx 26rpx;
-}
-
-.type-container picker image {
-    width: 30rpx;
-    margin-left: 10rpx;
+  color: #2661a7;
 }
 
 .product-container {
-    background: #B2CCE7;
-    padding: 0 30rpx 21rpx;
+  background: #b2cce7;
+}
+
+.product-container .page__bd {
+  padding: 0 30rpx 21rpx;
 }
 
 .product {
-    background: transparent;
-}
-
-.product::after {
-    border: none;
-}
-
-.product::before,
-.product .item::before {
-    border: none;
+  background: transparent;
 }
 
 .product .item {
-    margin-top: 20rpx;
-    background: #D9E6F2;
+  margin-top: 20rpx;
+  background: #cee3fd;
+  border: 2rpx solid #d72316;
+  position: relative;
+  box-shadow: none;
+}
+
+.product .item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-style: solid;
+  border-width: 30rpx 0 0 15rpx;
+  border-color: transparent transparent transparent #d72316;
 }
 
 .product .item .logo-container {
-    background: white;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10rpx;
-    padding: 5rpx;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  padding: 5rpx;
 }
 
 .product .item .title {
-    font-size: 30rpx;
-    color: rgba(51, 51, 51, 1);
-    align-items: center;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  align-items: center;
+  color: #0251b6;
+  border-bottom: 2rpx solid #0251b6;
+  padding: 3rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product .item .title .name {
+  flex: 1;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.product .item .title .mark {
+  height: 30rpx;
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  border: 2rpx solid #d72316;
+  color: #d72316;
+  padding: 0 6rpx;
+  border-radius: 6rpx;
 }
 
 .product .item .desc {
-    font-size: 24rpx;
-    color: rgba(128, 128, 128, 1);
-    line-height: 38rpx;
+  font-size: 24rpx;
+  color: rgba(128, 128, 128, 1);
+  line-height: 38rpx;
+  padding: 3rpx 0;
+  color: #0251b6;
 }
 
 .drawer_screen {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #000;
-    opacity: 0.2;
-    overflow: hidden;
-    z-index: 1000;
-    color: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
 }
 
 .drawer_attr_box {
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 2000;
-    background: #fff;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
 }
 
 .drawer_attr_content {
-    height: 600rpx;
-    overflow-y: scroll;
+  height: 600rpx;
+  overflow-y: scroll;
 }
 
 .drawer_desc {
-    padding: 20rpx;
-    font-size: 26rpx;
-    border-bottom: 1rpx solid #D9E6F2;
+  padding: 20rpx;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #d9e6f2;
 }

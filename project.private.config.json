@@ -55,6 +55,13 @@
         {
           "name": "展会服务",
           "pathName": "pages/about/server",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "创新产品",
+          "pathName": "pages/products/page",
+          "query": "award=1",
           "scene": null
         }
       ]
