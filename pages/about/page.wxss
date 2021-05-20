@@ -108,7 +108,7 @@
   content: '';
   position: absolute;
   width: 3rpx;
-  left: calc(50% - 1rpx);
+  left: calc(50% - 3rpx);
   top: -16rpx;
   height: 100%;
   background: #0251b6;

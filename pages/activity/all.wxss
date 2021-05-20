@@ -81,9 +81,6 @@
   padding: 40rpx 20rpx;
 }
 
-.list-container.self {
-}
-
 .month {
   color: #094a8a;
   font-size: 60rpx;
@@ -126,9 +123,9 @@
   content: '';
   position: absolute;
   width: 3rpx;
-  left: calc(50% - 1rpx);
+  left: calc(50% - 3rpx);
   top: -16rpx;
-  height: 100%;
+  bottom: -10rpx;
   background: #0251b6;
 }
 
