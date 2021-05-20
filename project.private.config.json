@@ -49,6 +49,12 @@
         {
           "name": "展会论坛",
           "pathName": "pages/activity/all",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "展会服务",
+          "pathName": "pages/about/server",
           "scene": null
         }
       ]
