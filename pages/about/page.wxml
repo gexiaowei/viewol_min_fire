@@ -1,63 +1,93 @@
 <view class="page">
-    <view class="page_bd">
-        <block wx:for="{{article}}" wx:key="index">
-            <view class="title weui-flex">
-                <view class="arrow"></view>
-                <view class="arrow"></view>
-                <view class="name">{{item.title}}</view>
-                <view class="arrow flip"></view>
-                <view class="arrow flip"></view>
-            </view>
-            <view class="sub-title">{{item.sub_title}}</view>
-            <view>
-                <view class="article" wx:for="{{item.content}}" wx:for-item="content" wx:for-index="*this">
-                    {{content}}
-                </view>
-            </view>
-        </block>
-        <view view class="title weui-flex">
-            <view class="arrow"></view>
-            <view class="arrow"></view>
-            <view class="name">时间安排</view>
-            <view class="arrow flip"></view>
-            <view class="arrow flip"></view>
+  <view class="nav">
+    <image
+      src="../../images/nav.png"
+      mode="widthFix"
+      class="w-100"
+    ></image>
+  </view>
+  <view class="page_bd">
+    <block
+      wx:for="{{article}}"
+      wx:key="index"
+      class="section"
+    >
+      <view class="title weui-flex">
+        <view class="name">{{item.title}}</view>
+        <view class="sub-title">{{item.sub_title}}</view>
+        <view class="text-center background-image">
+          <image src="../../images/about/bakground_title.png" mode="widthFix" />
         </view>
-        <view class="sub-title">TIME ARRANGEMENT</view>
-        <view class="list" wx:for="{{arrangement}}" wx:for-item="data" wx:for-index="name" wx:key="name">
-            <view class="arrangement-name">{{data.name}}</view>
-            <view class="item">
-                <view class="weui-flex time-container">
-                    <view class="left">
-                        <image src="../../images/common/icon_clock.png" mode="widthFix" />
-                    </view>
-                    <view class="weui-flex__item right">
-                        <view class="time">{{data.year}}年</view>
-                    </view>
-                </view>
-                <view class="weui-flex activity" wx:for="{{data.content}}">
-                    <view class="left weui-flex">
-                        <view class="point"></view>
-                    </view>
-                    <view class="weui-flex__item right">
-                        <view class="weui-flex">
-                            <text>日期</text>
-                            <text class="weui-flex__item desc">{{item.date}}</text>
-                        </view>
-                        <view class="weui-flex">
-                            <text>时间</text>
-                            <text class="weui-flex__item desc">{{item.time}}</text>
-                        </view>
-                        <view class="weui-flex" wx:if="{{!!item.content}}">
-                            <text>主题</text>
-                            <text class="weui-flex__item desc">{{item.content}}</text>
-                        </view>
-                    </view>
-                </view>
-            </view>
+      </view>
+      <view class="article-container">
+        <view
+          class="article"
+          wx:for="{{item.content}}"
+          wx:for-item="content"
+          wx:for-index="*this"
+        >
+          {{content}}
         </view>
+      </view>
+    </block>
+    <view class="title weui-flex">
+      <view class="name">时间安排</view>
+      <view class="sub-title">TIME ARRANGEMENT</view>
+      <view class="text-center background-image">
+        <image src="../../images/about/bakground_title.png" mode="widthFix" />
+      </view>
     </view>
-    <view class="page_fd">
-        <view class="tip">备注</view>
-        <view class="content">2019年10月16日9：30-10：30开幕式期间观众从东登录厅、西登录厅、北登录厅进入参观</view>
+    <view class="list-container">
+      <view
+        class="list"
+        wx:for="{{arrangement}}"
+        wx:for-item="data"
+        wx:for-index="name"
+        wx:key="name"
+      >
+        <view class="arrangement-name">{{data.name}}</view>
+        <view class="item">
+          <view class="weui-flex time-container">
+            <view class="left">
+              <image src="../../images/common/icon_clock.png" mode="widthFix" />
+            </view>
+            <view class="weui-flex__item right">
+              <view class="time">{{data.year}}年</view>
+            </view>
+          </view>
+          <view class="weui-flex activity" wx:for="{{data.content}}">
+            <view class="left weui-flex">
+              <view class="point">
+                <image
+                  class=""
+                  src="../../images/common/icon_arrow_right.png"
+                  mode="widthFix"
+                />
+
+              </view>
+            </view>
+            <view class="weui-flex__item right">
+              <view class="weui-flex" wx:if="{{!!item.date}}">
+                <text>日期</text>
+                <text class="weui-flex__item desc">{{item.date}}</text>
+              </view>
+              <view class="weui-flex" wx:if="{{!!item.time}}">
+                <text>时间</text>
+                <text class="weui-flex__item desc">{{item.time}}</text>
+              </view>
+              <view class="weui-flex" wx:if="{{!!item.content}}">
+                <text>主题</text>
+                <text class="weui-flex__item desc">{{item.content}}</text>
+              </view>
+              <view class="weui-flex" wx:if="{{!!item.note}}">
+                <text>备注</text>
+                <text class="weui-flex__item desc">{{item.note}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
+  </view>
 </view>
+

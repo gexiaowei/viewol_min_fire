@@ -1,0 +1,50 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "展商秀",
+          "pathName": "pages/index/page",
+          "query": "scene=11:6:12",
+          "scene": 1011
+        },
+        {
+          "id": 1,
+          "name": "论坛活动",
+          "pathName": "pages/index/page",
+          "query": "scene=12:106",
+          "scene": 1011
+        },
+        {
+          "id": 3,
+          "name": "报名页面",
+          "pathName": "pages/index/page",
+          "query": "scene=13",
+          "scene": 1035
+        },
+        {
+          "id": 2,
+          "name": "开发用",
+          "pathName": "pages/about/server",
+          "query": "",
+          "scene": 1008
+        },
+        {
+          "name": "关于",
+          "pathName": "pages/about/page",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
