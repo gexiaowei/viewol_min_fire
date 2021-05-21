@@ -87,6 +87,12 @@
           "pathName": "pages/products/detail",
           "query": "id=4828",
           "scene": null
+        },
+        {
+          "name": "产品详情",
+          "pathName": "pages/products/detail",
+          "query": "id=4828",
+          "scene": null
         }
       ]
     }
