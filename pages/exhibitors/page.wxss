@@ -295,43 +295,6 @@
   background: transparent;
 }
 
-/* 
-
-
-.exhibitors::after {
-  border: none;
-}
-
-.exhibitors::before,
-.exhibitors .item::before {
-  border: none;
-}
-
-.exhibitors .item {
-  margin-top: 20rpx;
-  background: #d9e6f2;
-}
-
-.exhibitors .item .logo-container {
-  background: white;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10rpx;
-  padding: 5rpx;
-}
-
-.exhibitors .item .title {
-  font-size: 30rpx;
-  align-items: center;
-  color: rgba(51, 51, 51, 1);
-}
-
-.exhibitors .item .desc {
-  font-size: 24rpx;
-  color: rgba(128, 128, 128, 1);
-  line-height: 38rpx;
-} */
-
 .drawer_screen {
   width: 100%;
   height: 100%;

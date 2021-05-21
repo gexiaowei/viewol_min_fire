@@ -93,6 +93,12 @@
           "pathName": "pages/products/detail",
           "query": "id=4828",
           "scene": null
+        },
+        {
+          "name": "诚信企业",
+          "pathName": "pages/exhibitors/honesty",
+          "query": "",
+          "scene": null
         }
       ]
     }
