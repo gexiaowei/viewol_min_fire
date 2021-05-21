@@ -1,46 +1,111 @@
-<view class="page exhibitors-container">
+<view class="exhibitors-container">
+  <image
+    src="../../images/nav.png"
+    mode="widthFix"
+    class="w-100 "
+  ></image>
+  <view class="page exhibitors-content-container">
     <view class="page__hd">
-        <view class="weui-flex">
-            <view class="weui-flex__item weui-flex search-container">
-                <view>
-                    <image class="" src="../../images/common/icon_search.png" mode="widthFix" />
-                </view>
-                <view class="weui-flex__item">
-                    <input type="text" placeholder-class="phcolor" class="weui-search-bar__input search" placeholder="请输入展商名称" confirm-type="search" bindconfirm="changeKeyword" />
-                </view>
+      <view class="category-items">
+        <view
+          class="basic-category {{categoryId===category.id?'active':''}}"
+          wx:for="{{category_list}}"
+          wx:for-item="category"
+          wx:for-index="*this"
+          wx:key="id"
+          data-id="{{category.id}}"
+          bindtap="changeCategory"
+        >
+          <view class="name">
+            {{category.name}}
+          </view>
+          <view class="mark">
+            <view>
+              PRODUCT
             </view>
-            <view class="type-container">
-                <picker bindchange="changeCategory" value="id" range-key="name" range="{{category_list}}">
-                    <view class="picker">
-                        <text>分类</text>
-                        <image src="../../images/common/icon_type.png" mode="widthFix"></image>
-                    </view>
-                </picker>
+            <view>
+              PRESENTATION
             </view>
+          </view>
         </view>
+
+      </view>
+      <view class="position-items">
+        <block
+          wx:for="{{position_list}}"
+          wx:for-item="position"
+          wx:for-index="*this"
+          wx:key="id"
+        >
+          <view
+            class="position {{position.is_out?'out':''}} {{hall===position.id?'active':''}}"
+            data-id="{{position.id}}"
+            bindtap="changeHall"
+          >
+            <view class="name">
+              {{position.name}}
+            </view>
+          </view>
+        </block>
+        <view class="search-container">
+          <image
+            class="search-background"
+            src="../../images/category/background_input.png"
+            mode="widthFix"
+          />
+          <image
+            class="search-icon"
+            src="../../images/common/icon_search.png"
+            mode="widthFix"
+          />
+          <input
+            type="text"
+            bindconfirm="changeKeyword"
+            placeholder-style="color:#A0C9FD;"
+            confirm-type="search"
+            placeholder="请输入产品名称"
+          />
+
+        </view>
+      </view>
+
     </view>
     <view class="page__bd">
-        <view class="weui-panel weui-panel_access exhibitors">
-            <view class="weui-panel__bd">
-                <navigator url="../web/page?url={{item.link}}&title={{item.name||'展商秀'}}&sence={{item.sence}}" class="weui-media-box weui-media-box_appmsg item" hover-class="weui-cell_active" wx:for="{{company_list}}" wx:key="id">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
-                        <image class="weui-media-box__thumb" src="{{item.logoView}}" mode="aspectFit" lazy-load="{{true}}" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title weui-flex title">
-                            <view>{{item.name}}</view>
-                        </view>
-                        <view>
-                            <image wx:if="{{!!award}}" style="height:30rpx;width:80rpx;" src="../../images/common/icon_apply.jpg" />
-                        </view>
-                        <view class="weui-media-box__desc desc">{{item.content}}</view>
-                    </view>
-                </navigator>
+      <view class="weui-panel_access exhibitors">
+        <view class="weui-panel__bd">
+          <navigator
+            url="../web/page?url={{item.link}}&title={{item.name||'展商秀'}}&sence={{item.sence}}"
+            class="weui-media-box weui-media-box_appmsg item"
+            hover-class="weui-cell_active"
+            wx:for="{{company_list}}"
+            wx:key="id"
+          >
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
+              <image
+                class="weui-media-box__thumb"
+                src="{{item.logoView}}"
+                mode="aspectFit"
+                lazy-load="{{true}}"
+              />
             </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title weui-flex title">
+                <view class="name">{{item.name}}</view>
+                <view class="mark" wx:if="{{!!award}}">
+                  已申报
+                </view>
+              </view>
+              <view class="weui-media-box__desc desc">{{item.place}}</view>
+            </view>
+          </navigator>
         </view>
-        <view wx:if="{{loadding}}" class="weui-loadmore">
-            <view class="weui-loading"></view>
-            <view class="weui-loadmore__tips">正在加载</view>
-        </view>
+      </view>
+      <view wx:if="{{loadding}}" class="weui-loadmore">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
     </view>
+  </view>
+
 </view>
+

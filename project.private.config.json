@@ -69,6 +69,11 @@
           "pathName": "pages/activity/page",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "展商",
+          "pathName": "pages/exhibitors/page",
+          "scene": null
         }
       ]
     }
