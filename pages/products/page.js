@@ -139,8 +139,9 @@ Page({
       this.setData({
         product_list: is_replace ? result : product_list.concat(result)
       })
-      if (result.length)
-        this.setData({ lastSeq: result[result.length - 1]['seq'] })
+      if (result.length) {
+        this.setData({ lastSeq: result[result.length - 1].seq })
+      }
     }
 
     this.setData({ loadding: false })
