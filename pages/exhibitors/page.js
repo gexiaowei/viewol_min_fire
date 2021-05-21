@@ -120,7 +120,7 @@ Page({
       lastSeq,
       company_list,
       award,
-      hall
+      hall = ''
     } = this.data
     let {
       data: { status, result = [], message }

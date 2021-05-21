@@ -1,79 +1,108 @@
-<view class="page product-container">
+<view class="page production-container">
   <image
     src="../../images/nav.png"
     mode="widthFix"
     class="w-100 "
   ></image>
-  <!-- <view class="page__hd">
-    <view class="weui-flex">
-      <view class="weui-flex__item weui-flex search-container">
-        <view>
+  <view class="production-content-container">
+    <view class="page__hd">
+      <view class="category-items">
+        <view
+          class="basic-category {{categoryId===category.id?'active':''}}"
+          wx:for="{{category_list}}"
+          wx:for-item="category"
+          wx:for-index="*this"
+          wx:key="id"
+          data-id="{{category.id}}"
+          bindtap="changeCategory"
+        >
+          <view class="name">
+            {{category.name}}
+          </view>
+          <view class="mark">
+            <view>
+              PRODUCT
+            </view>
+            <view>
+              PRESENTATION
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="position-items">
+        <block
+          wx:for="{{position_list}}"
+          wx:for-item="position"
+          wx:for-index="*this"
+          wx:key="id"
+        >
+          <view
+            class="position {{position.is_out?'out':''}} {{hall===position.id?'active':''}}"
+            data-id="{{position.id}}"
+            bindtap="changeHall"
+          >
+            <view class="name">
+              {{position.name}}
+            </view>
+          </view>
+        </block>
+        <view class="search-container">
           <image
-            class=""
+            class="search-background"
+            src="../../images/category/background_input.png"
+            mode="widthFix"
+          />
+          <image
+            class="search-icon"
             src="../../images/common/icon_search.png"
             mode="widthFix"
           />
-        </view>
-        <view class="weui-flex__item">
           <input
             type="text"
-            placeholder-class="phcolor"
-            class="weui-search-bar__input search"
-            placeholder="请输入产品名称"
-            confirm-type="search"
             bindconfirm="changeKeyword"
+            placeholder-style="color:#A0C9FD;"
+            confirm-type="search"
+            placeholder="请输入产品名称"
           />
         </view>
       </view>
-      <view class="type-container">
-        <picker
-          bindchange="changeCategory"
-          value="{{id}}"
-          range-key="name"
-          range="{{category_list}}"
-        >
-          <view class="picker">
-            <text>分类</text>
-            <image src="../../images/common/icon_type.png" mode="widthFix"></image>
-          </view>
-        </picker>
-      </view>
     </view>
-  </view> -->
-  <view class="page__bd">
-    <view class=" weui-panel_access product">
-      <view class="weui-panel__bd">
-        <navigator
-          url="/pages/products/detail?id={{item.id}}"
-          class="weui-media-box weui-media-box_appmsg item"
-          hover-class="weui-cell_active"
-          wx:for="{{product_list}}"
-          wx:key="id"
-        >
-          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
-            <image
-              class="weui-media-box__thumb"
-              src="{{item.imageView}}"
-              mode="aspectFit"
-              lazy-load="{{true}}"
-            />
-          </view>
-          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-            <view class="title">
-              <view class="name">{{item.name}}</view>
-              <view class="mark">
-                已入围
-              </view>
+    <view class="page__bd">
+      <view class=" weui-panel_access product">
+        <view class="weui-panel__bd">
+          <navigator
+            url="/pages/products/detail?id={{item.id}}"
+            class="weui-media-box weui-media-box_appmsg item"
+            hover-class="weui-cell_active"
+            wx:for="{{product_list}}"
+            wx:key="id"
+          >
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
+              <image
+                class="weui-media-box__thumb"
+                src="{{item.imageView}}"
+                mode="aspectFit"
+                lazy-load="{{true}}"
+              />
             </view>
-            <view class="weui-media-box__desc desc">{{item.pdfName}}</view>
-          </view>
-        </navigator>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="title">
+                <view class="name">{{item.name}}</view>
+                <view class="mark">
+                  已入围
+                </view>
+              </view>
+              <view class="weui-media-box__desc desc">{{item.pdfName}}</view>
+            </view>
+          </navigator>
+        </view>
       </view>
-    </view>
-    <view wx:if="{{loadding}}" class="weui-loadmore">
-      <view class="weui-loading"></view>
-      <view class="weui-loadmore__tips">正在加载</view>
+      <view wx:if="{{loadding}}" class="weui-loadmore">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
     </view>
   </view>
+
 </view>
 

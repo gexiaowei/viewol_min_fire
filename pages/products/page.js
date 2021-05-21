@@ -10,7 +10,62 @@ Page({
     award: null,
     product_list: [],
     category_list: [],
+    position_list: [
+      {
+        id: 'W1',
+        name: 'W1'
+      },
+      {
+        id: 'W2',
+        name: 'W2'
+      },
+      {
+        id: 'W3',
+        name: 'W3'
+      },
+      {
+        id: 'W4',
+        name: 'W4'
+      },
+      {
+        id: 'E1',
+        name: 'E1'
+      },
+      {
+        id: 'E2',
+        name: 'E2'
+      },
+      {
+        id: 'E3',
+        name: 'E3'
+      },
+      {
+        id: 'E4',
+        name: 'E4'
+      },
+      {
+        id: 'E1外',
+        name: 'E1',
+        is_out: true
+      },
+      {
+        id: 'E2外',
+        name: 'E2',
+        is_out: true
+      },
+      {
+        id: 'E3外',
+        name: 'E3',
+        is_out: true
+      },
+      {
+        id: 'E4外',
+        name: 'E4',
+        is_out: true
+      }
+    ],
     lastSeq: '',
+    hall: '',
     keyWord: '',
     loadding: false
   },
@@ -29,8 +84,23 @@ Page({
   },
 
   changeCategory: function (event) {
-    const id = event.detail.value
-    this.setData({ categoryId: this.data.category_list[id]['id'] })
+    const id = event.currentTarget.dataset.id
+    if (id === this.data.categoryId) {
+      this.setData({ categoryId: '' })
+    } else {
+      this.setData({ categoryId: id })
+    }
+    this.getProductList(true)
+  },
+
+  changeHall: function (event) {
+    const id = event.currentTarget.dataset.id
+    if (id === this.data.hall) {
+      this.setData({ hall: '' })
+    } else {
+      this.setData({ hall: id })
+    }
+
     this.getProductList(true)
   },
 
@@ -46,7 +116,8 @@ Page({
       categoryId = '',
       lastSeq,
       product_list,
-      award
+      award,
+      hall = ''
     } = this.data
     const {
       data: { status, result = [], message }
@@ -58,6 +129,7 @@ Page({
         award,
         keyWord,
         categoryId,
+        hall,
         lastSeq: is_replace ? '' : lastSeq,
         num: 20
       }

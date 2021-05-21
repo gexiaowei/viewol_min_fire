@@ -73,6 +73,12 @@
         {
           "name": "展商",
           "pathName": "pages/exhibitors/page",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "产品查询",
+          "pathName": "pages/products/page",
           "scene": null
         }
       ]
