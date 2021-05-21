@@ -58,3 +58,9 @@
   left: 50%;
   transform: translate(-50%, 30%);
 }
+
+.icon-detail {
+  margin-left: 20rpx;
+  width: 24rpx;
+  height: 24rpx;
+}

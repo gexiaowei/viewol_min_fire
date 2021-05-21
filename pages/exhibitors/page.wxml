@@ -96,6 +96,14 @@
               </view>
               <view class="weui-media-box__desc desc">{{item.place}}</view>
             </view>
+            <view class="weui-media-box__fd">
+              <image
+                class="icon-detail"
+                src="../../images/common/icon_detail.png"
+                mode="widthFix"
+              />
+
+            </view>
           </navigator>
         </view>
       </view>
