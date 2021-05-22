@@ -52,9 +52,11 @@ Page({
     setTimeout(() => {
       if (globalData.firefighting_activity_self != this.data.is_self) {
         this.setData({ is_self: globalData.firefighting_activity_self })
-        if (globalData.firefighting_activity_self === 1)
+        if (globalData.firefighting_activity_self === 1) {
           this.getSelfScheduleList()
-        else this.getScheduleList()
+        } else {
+          this.getScheduleList()
+        }
       }
     }, 500)
   },
@@ -80,7 +82,7 @@ Page({
       method: 'GET',
       data: {
         expoId,
-        date: `${year}-${month}-${tabs[activeIndex]['date']}`,
+        date: `${year}-${month}-${tabs[activeIndex].date}`,
         num: 200,
         bbs: -1
       }
