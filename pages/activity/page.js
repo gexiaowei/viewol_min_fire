@@ -8,28 +8,28 @@ const sliderWidth = 28 // 需要设置slider的宽度，用于计算中间位置
 
 Page({
   data: {
-    year: '2019',
+    year: '2021',
     month: '10',
     tabs: [
       {
         week: '二',
-        date: 15
+        date: 12
       },
       {
         week: '三',
-        date: 16
+        date: 13
       },
       {
         week: '四',
-        date: 17
+        date: 14
       },
       {
         week: '五',
-        date: 18
+        date: 15
       },
       {
         week: '六',
-        date: 19
+        date: 16
       }
     ],
     activeIndex: 0,
