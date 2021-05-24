@@ -12,7 +12,7 @@
       wx:key="index"
       class="section"
     >
-      <view class="title weui-flex">
+      <view class="section-title weui-flex">
         <view class="name">{{item.title}}</view>
         <view class="sub-title">{{item.sub_title}}</view>
         <view class="text-center background-image">
@@ -30,7 +30,7 @@
         </view>
       </view>
     </block>
-    <view class="title weui-flex">
+    <view class="section-title weui-flex">
       <view class="name">时间安排</view>
       <view class="sub-title">TIME ARRANGEMENT</view>
       <view class="text-center background-image">

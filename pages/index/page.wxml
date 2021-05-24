@@ -108,7 +108,7 @@
     <video
       src="{{video.source}}"
       style="width:100%"
-      autoplay="{{false}}"
+      autoplay="{{true}}"
       show-mute-btn="{{true}}"
       object-fit="fill"
     ></video>

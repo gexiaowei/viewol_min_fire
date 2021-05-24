@@ -1,11 +1,11 @@
 <view class="all-container">
   <image
-    src="../../images/nav.png"
+    src="../../images/nav_bbs.png"
     mode="widthFix"
-    class="w-100 "
+    class="w-100"
   ></image>
   <view class="page_bd">
-    <view class="title weui-flex">
+    <view class="section-title weui-flex">
       <view class="name">时间安排</view>
       <view class="sub-title">TIME ARRANGEMENT</view>
       <view class="text-center background-image">

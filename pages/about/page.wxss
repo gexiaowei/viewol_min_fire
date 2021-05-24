@@ -50,16 +50,16 @@
 }
 
 .article-container {
-  margin-top: -10rpx;
+  margin-top: -14rpx;
   border: 2rpx solid #ffffff;
   border-radius: 20rpx;
   padding: 40rpx 20rpx;
 }
 
 .article {
-  text-indent: 72rpx;
-  line-height: 60rpx;
-  font-size: 32rpx;
+  text-indent: 56rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
   color: #192d45;
   word-break: break-all;
   text-align: justify;
@@ -70,6 +70,7 @@
 }
 
 .list-container {
+  margin-top: -14rpx;
   border: 2rpx solid #ffffff;
   border-radius: 20rpx;
   padding: 10rpx 20rpx 40rpx;
