@@ -1,33 +1,43 @@
-@import "../../weui.wxss";
+@import '../../weui.wxss';
+.page {
+  min-height: 100vh;
+  background-color: #98c3fb;
+}
+
 .slide-image {
-    width: 100%;
-    height: 300rpx;
+  width: 100%;
+  height: 300rpx;
 }
 
 .info-list {
-    padding: 0 30rpx;
+  margin-top: 20rpx;
 }
 
 .info-list .item {
-    padding: 15rpx 0;
-    border-bottom: 1rpx solid #EDEDED;
+  margin: 4.5rpx 0;
+  padding: 15rpx 30rpx;
+  background: #cee3fd;
 }
 
 .info-list .item .title {
-    font-size: 34rpx;
-    color: #2B3C4C;
+  font-size: 28.47rpx;
+  color: #0251b6;
+  line-height: 41.67rpx;
 }
 
 .info-list .item .time {
-    font-size: 24rpx;
-    color: #959595;
+  font-size: 20.83rpx;
+  color: #0251b6;
+  line-height: 41.67px;
 }
 
 .info-list .item .cover {
-    margin-left: 20rpx;
+  margin-left: 20rpx;
 }
 
 .info-list .item .cover image {
-    width: 160rpx;
-    height: 160rpx;
+  width: 132rpx;
+  height: 132rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
 }

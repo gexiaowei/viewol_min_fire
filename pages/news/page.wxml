@@ -1,24 +1,46 @@
-<view class="page_hd">
-    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
-        <block wx:for="{{imgUrls}}" wx:key="*this">
-            <swiper-item>
-                <image src="{{item}}" mode="aspectFill" class="slide-image" />
-            </swiper-item>
-        </block>
-    </swiper>
+ <view class="page">
+    <view class="page_hd">
+  <swiper
+    indicator-dots="{{true}}"
+    autoplay="{{true}}"
+    interval="{{5000}}"
+    duration="{{1000}}"
+  >
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image
+          src="{{item}}"
+          mode="aspectFill"
+          class="slide-image"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
 <view class="page_bd info-list">
-    <view class="item weui-flex" wx:for="{{info_list}}" wx:key="id" data-id="{{item.id}}" data-url="{{item.contentUrl}}" data-title="{{item.title}}" bindtap="goNewsDetail">
-        <view class="weui-flex__item">
-            <view class="title">{{item.title}}</view>
-            <view class="time">{{item.pubTime}}</view>
-        </view>
-        <view class="cover">
-            <image src="{{item.picUrl}}" mode="sacleToFit" />
-        </view>
+  <view
+    class="item weui-flex"
+    wx:for="{{info_list}}"
+    wx:key="id"
+    data-id="{{item.id}}"
+    data-url="{{item.contentUrl}}"
+    data-title="{{item.title}}"
+    bindtap="goNewsDetail"
+  >
+    <view class="weui-flex__item">
+      <view class="title">{{item.title}}</view>
+      <view class="time">{{item.pubTime}}</view>
     </view>
-    <view wx:if="{{loadding}}" class="weui-loadmore">
-        <view class="weui-loading"></view>
-        <view class="weui-loadmore__tips">正在加载</view>
+    <view class="cover">
+      <image src="{{item.picUrl}}" mode="aspectFill" />
     </view>
+  </view>
+  <view wx:if="{{loadding}}" class="weui-loadmore">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
 </view>
+
+
+</view>
+  
