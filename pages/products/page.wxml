@@ -88,7 +88,7 @@
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="title">
                 <view class="name">{{item.name}}</view>
-                <view class="mark" wx:if="!!award">
+                <view class="mark" wx:if="{{!!award}}">
                   已入围
                 </view>
               </view>
