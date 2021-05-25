@@ -93,6 +93,14 @@ Page({
     })
   },
 
+  showImage: function () {
+    wx.previewImage({
+      urls: [
+        'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2496571732,442429806&fm=26&gp=0.jpg'
+      ]
+    })
+  },
+
   getCompanyInfo: async function (id) {
     const {
       data: {

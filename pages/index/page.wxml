@@ -271,7 +271,7 @@
       </view>
       <view class="list">
         <view class="row-item">
-          <view class="place">
+          <view class="place" bindtap="showImage">
             W1
           </view>
           <view class="place">
