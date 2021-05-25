@@ -74,7 +74,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function ({ award }) {
-    console.log(award)
     if (award) this.setData({ award })
     this.getCategoryList()
     this.getProductList()
