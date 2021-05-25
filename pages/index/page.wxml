@@ -108,7 +108,7 @@
     <video
       src="{{video.source}}"
       style="width:100%"
-      autoplay="{{true}}"
+      autoplay="{{false}}"
       show-mute-btn="{{true}}"
       object-fit="fill"
     ></video>
@@ -258,6 +258,73 @@
             </swiper-item>
           </block>
         </swiper>
+      </view>
+    </view>
+  </view>
+  <view class="places hot">
+    <view class="content">
+      <view class="">
+        <navigator class="normal-title" hover-class="none">
+          <image class="icon" src="../../images/index/icon_zhinan.png"></image>
+          <view class="title">参观指南</view>
+        </navigator>
+      </view>
+      <view class="list">
+        <view class="row-item">
+          <view class="place">
+            W1
+          </view>
+          <view class="place">
+            W2
+          </view>
+          <view class="place">
+            E1
+          </view>
+          <view class="place">
+            E2
+          </view>
+          <view class="place">
+            E3
+          </view>
+          <view class="place">
+            E4
+          </view>
+
+        </view>
+        <view class="row-item">
+          <view class="place">
+            W3
+          </view>
+          <view class="place">
+            W4
+          </view>
+          <view class="place out">
+            E1
+          </view>
+          <view class="place out">
+            E2
+          </view>
+          <view class="place out">
+            E3
+          </view>
+          <view class="place out">
+            E4
+          </view>
+        </view>
+        <view class="row-item">
+          <view class="guide">
+            全馆
+            <text>平面图</text>
+          </view>
+          <view class="guide">
+            周边
+            <text>引导图</text>
+          </view>
+          <view class="guide">
+            交通
+            <text>引导图</text>
+          </view>
+        </view>
       </view>
     </view>
   </view>

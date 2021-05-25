@@ -99,11 +99,13 @@
 
 .time-line,
 .exhibitors,
+.places,
 .product {
   margin-top: 0rpx;
   padding: 30rpx;
 }
 
+.places .content,
 .time-line .content,
 .exhibitors .content,
 .product .content {
@@ -207,6 +209,63 @@
 .hot .list .item image {
   width: 100%;
   height: 100%;
+}
+
+.places {
+}
+
+.places .row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17rpx;
+}
+
+.guide {
+  width: 204rpx;
+  height: 48rpx;
+  background: #a0c9fd;
+  border: 2rpx solid #85bbfe;
+  border-radius: 15rpx;
+
+  font-size: 35rpx;
+  font-weight: 800;
+  color: #f9fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide text {
+  font-size: 35rpx;
+  font-weight: 300;
+  color: #ffe200;
+}
+
+.place {
+  width: 96rpx;
+  height: 96rpx;
+  background: #a0c9fd;
+  border: 2rpx solid #85bbfe;
+  border-radius: 15rpx;
+  line-height: 96rpx;
+  font-size: 45.4rpx;
+  font-weight: 800;
+  text-align: center;
+  color: #f9fafc;
+  position: relative;
+}
+
+.place.out::after {
+  content: '外';
+  color: #f9fafc;
+
+  position: absolute;
+  font-size: 21rpx;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -36rpx;
 }
 
 image.more {
