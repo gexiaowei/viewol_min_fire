@@ -2,7 +2,7 @@ Page({
   data: {
     article: [
       {
-        title: '展会欢迎词',
+        title: '展会欢迎辞',
         sub_title: 'HAEREMAI EXHIBITION',
         content: [
           '2021– 让我们相聚北京',
@@ -55,7 +55,7 @@ Page({
         ]
       },
       visit: {
-        year: '2019',
+        year: '2021',
         name: '参观日程',
         content: [
           {

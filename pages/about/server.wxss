@@ -23,6 +23,7 @@
 .title .name {
   display: inline-block;
   color: #ffffff;
+  font-size: 42rpx;
   padding: 0 20rpx 0 40rpx;
   margin-bottom: -8rpx;
 }
@@ -82,4 +83,16 @@
 background: #888;
 
 margin:10 0rpx； */
+}
+
+.infos {
+  margin-bottom: 49rpx;
+}
+
+.content-container .sub-title {
+  font-size: 27.78rpx;
+}
+
+.content:not(:last-child) {
+  margin-bottom: 32rpx;
 }

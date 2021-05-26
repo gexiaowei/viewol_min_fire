@@ -136,7 +136,7 @@
       </view>
       <view class="comment">
         <view
-          class="item weui-flex"
+          class="item weui-flex {{item.reply?'reply':''}}"
           wx:for="{{comment}}"
           wx:key="id"
         >
