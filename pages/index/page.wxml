@@ -271,56 +271,116 @@
       </view>
       <view class="list">
         <view class="row-item">
-          <view class="place" bindtap="showImage">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/W1.jpg"
+            bindtap="showImage"
+          >
             W1
           </view>
-          <view class="place">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/W2`.jpg"
+            bindtap="showImage"
+          >
             W2
           </view>
-          <view class="place">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/E1.jpg"
+            bindtap="showImage"
+          >
             E1
           </view>
-          <view class="place">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/E2.jpg"
+            bindtap="showImage"
+          >
             E2
           </view>
-          <view class="place">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/E3.jpg"
+            bindtap="showImage"
+          >
             E3
           </view>
-          <view class="place">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/E4.jpg"
+            bindtap="showImage"
+          >
             E4
           </view>
 
         </view>
         <view class="row-item">
-          <view class="place">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/W3.jpg"
+            bindtap="showImage"
+          >
             W3
           </view>
-          <view class="place">
+          <view
+            class="place"
+            data-url="https://www.view-ol.com/pmt/W4.jpg"
+            bindtap="showImage"
+          >
             W4
           </view>
-          <view class="place out">
+          <view
+            class="place out"
+            data-url="https://www.view-ol.com/pmt/E1w.jpg"
+            bindtap="showImage"
+          >
             E1
           </view>
-          <view class="place out">
+          <view
+            class="place out"
+            data-url="https://www.view-ol.com/pmt/E2w.jpg"
+            bindtap="showImage"
+          >
             E2
           </view>
-          <view class="place out">
+          <view
+            class="place out"
+            data-url="https://www.view-ol.com/pmt/E3w.jpg"
+            bindtap="showImage"
+          >
             E3
           </view>
-          <view class="place out">
+          <view
+            class="place out"
+            data-url="https://www.view-ol.com/pmt/E4w.jpg"
+            bindtap="showImage"
+          >
             E4
           </view>
         </view>
         <view class="row-item">
-          <view class="guide">
+          <view
+            class="guide"
+            data-url="https://www.view-ol.com/pmt/qg.png"
+            bindtap="showImage"
+          >
             全馆
             <text>平面图</text>
           </view>
-          <view class="guide">
+          <view
+            class="guide"
+            data-url="https://www.view-ol.com/pmt/zb.png"
+            bindtap="showImage"
+          >
             周边
             <text>引导图</text>
           </view>
-          <view class="guide">
+          <view
+            class="guide"
+            data-url="https://www.view-ol.com/pmt/jt.png"
+            bindtap="showImage"
+          >
             交通
             <text>引导图</text>
           </view>
