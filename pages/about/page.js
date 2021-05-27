@@ -55,7 +55,7 @@ Page({
         ]
       },
       visit: {
-        year: '2019',
+        year: '2021',
         name: '参观日程',
         content: [
           {

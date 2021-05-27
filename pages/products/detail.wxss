@@ -109,6 +109,12 @@
   text-align: justify;
   text-indent: 48rpx;
   padding: 32rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.information .desc image {
+  max-width: 100% !important;
 }
 
 .relative .product {
@@ -214,7 +220,7 @@
   align-items: center;
 }
 
-.comment .item:nth-child(even) {
+.comment .item.reply {
   flex-direction: row-reverse;
 }
 
