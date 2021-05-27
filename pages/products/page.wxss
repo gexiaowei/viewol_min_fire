@@ -5,7 +5,7 @@
 }
 
 .production-content-container {
-  background: #b2cce7;
+  background: #a0c9fd;
   padding: 0 30rpx 21rpx;
 }
 
@@ -252,7 +252,7 @@
 .product .item {
   margin-top: 20rpx;
   background: #cee3fd;
-  border: 2rpx solid rgba(215, 35, 22, 0.5);
+  border: 2rpx solid rgba(215, 35, 22, 0.3);
   position: relative;
   box-shadow: none;
 }
@@ -297,7 +297,7 @@
   height: 30rpx;
   margin-left: 10rpx;
   font-size: 20rpx;
-  border: 2rpx solid rgba(215, 35, 22, 0.5);
+  border: 2rpx solid rgba(215, 35, 22, 0.3);
   color: #d72316;
   padding: 0 6rpx;
   border-radius: 6rpx;

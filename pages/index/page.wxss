@@ -1,7 +1,8 @@
 @import '../../weui.wxss';
 .page {
-  background-color: #98c3fb;
+  background-color: #9abffc;
   background-size: 100% auto;
+  background: #9abffc;
 }
 
 .title {
