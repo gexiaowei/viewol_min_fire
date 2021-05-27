@@ -135,26 +135,40 @@
         <view class="main">评论</view>
       </view>
       <view class="comment">
-        <view
-          class="item weui-flex {{item.reply?'reply':''}}"
-          wx:for="{{comment}}"
-          wx:key="id"
-        >
-          <view class="avatar-container">
-            <image
-              class="avatar"
-              src="{{item.headImgUrl}}"
-              mode="widthFix"
-            />
-          </view>
-          <view class="weui-flex__item info">
-            <!-- <view class="name">{{item.userName}}</view>
+        <block wx:for="{{comment}}" wx:key="id">
+          <view class="item weui-flex">
+            <view class="avatar-container">
+              <image
+                class="avatar"
+                src="{{item.headImgUrl}}"
+                mode="widthFix"
+              />
+            </view>
+            <view class="weui-flex__item info">
+              <!-- <view class="name">{{item.userName}}</view>
             <view class="time">{{format.date(item.cTime)}}</view> -->
-            <view class="content">{{item.comment}}</view>
+              <view class="content">{{item.comment}}</view>
+            </view>
+            <view class="avatar-container">
+            </view>
           </view>
-          <view class="avatar-container">
+          <view class="item weui-flex" wx:if="{{!!item.reply}}">
+            <view class="avatar-container">
+            </view>
+            <view class="weui-flex__item info">
+              <!-- <view class="name">{{item.userName}}</view>
+            <view class="time">{{format.date(item.cTime)}}</view> -->
+              <view class="content">{{item.reply}}</view>
+            </view>
+            <view class="avatar-container">
+              <image
+                class="avatar"
+                src="{{company.logoView}}"
+                mode="widthFix"
+              />
+            </view>
           </view>
-        </view>
+        </block>
       </view>
     </view>
   </view>
