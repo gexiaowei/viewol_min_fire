@@ -81,6 +81,7 @@
 .category-items .basic-category .mark {
   font-size: 13rpx;
   color: #ffe200;
+  font-weight: 200;
 }
 
 .category-items .basic-category image {
@@ -117,10 +118,11 @@
 .position-items .position.out::after {
   content: '外';
   position: absolute;
-  right: 5rpx;
-  bottom: 0rpx;
-  font-size: 20rpx;
+  right: 10rpx;
+  bottom: -4rpx;
+  font-size: 18rpx;
   color: #ffe200;
+  transform: scaleX(1.6);
 }
 
 .position-items .position image {
@@ -218,7 +220,7 @@
 
 .search-container input {
   font-size: 21rpx;
-  width: 100rpx;
+  width: 140rpx;
   left: 66rpx;
   position: absolute;
   top: 5rpx;
@@ -232,7 +234,7 @@
 .exhibitors .item {
   margin-top: 20rpx;
   background: #cee3fd;
-  border: 2rpx solid #d72316;
+  border: 2rpx solid rgba(215, 35, 22, 0.5);
   position: relative;
   box-shadow: none;
 }
@@ -277,7 +279,7 @@
   display: inline-block;
   height: 30rpx;
   font-size: 20rpx;
-  border: 2rpx solid #d72316;
+  border: 2rpx solid rgba(215, 35, 22, 0.5);
   color: #d72316;
   padding: 0 6rpx;
   border-radius: 6rpx;

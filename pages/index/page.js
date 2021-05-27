@@ -17,7 +17,7 @@ Page({
     video: {
       source: 'http://www.view-ol.com/1.mp4',
       link: 'https://www.baidu.com',
-      title: '百度'
+      title: '消防展'
     }
   },
 

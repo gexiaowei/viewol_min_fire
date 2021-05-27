@@ -21,10 +21,7 @@
           </view>
           <view class="mark">
             <view>
-              PRODUCT
-            </view>
-            <view>
-              PRESENTATION
+              EXHIBITOR LIST
             </view>
           </view>
         </view>
@@ -62,7 +59,7 @@
             bindconfirm="changeKeyword"
             placeholder-style="color:#A0C9FD;"
             confirm-type="search"
-            placeholder="请输入产品名称"
+            placeholder="请输入展商名称"
           />
 
         </view>
