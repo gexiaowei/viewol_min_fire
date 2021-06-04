@@ -105,6 +105,12 @@
           "pathName": "pages/news/page",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "诚信企业",
+          "pathName": "pages/exhibitors/honesty",
+          "query": "",
+          "scene": null
         }
       ]
     }

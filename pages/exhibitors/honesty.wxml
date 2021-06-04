@@ -1,114 +1,55 @@
 <view class="page exhibitors-container">
   <image
-    src="../../images/nav.png"
+    src="../../images/nav_honesty.png"
     mode="widthFix"
-    class="w-100 "
+    class="w-100 nav"
   ></image>
-  <view class="page exhibitors-content-container">
-    <view class="page__hd">
-      <view class="category-items">
-        <view
-          class="basic-category {{categoryId===category.id?'active':''}}"
-          wx:for="{{category_list}}"
-          wx:for-item="category"
-          wx:for-index="*this"
-          wx:key="id"
-          data-id="{{category.id}}"
-          bindtap="changeCategory"
-        >
-          <view class="name">
-            {{category.name}}
-          </view>
-          <view class="mark">
-            <view>
-              EXHIBITOR LIST
-            </view>
-          </view>
-        </view>
-      </view>
-      <view class="position-items">
-        <block
-          wx:for="{{position_list}}"
-          wx:for-item="position"
-          wx:for-index="*this"
-          wx:key="id"
-        >
-          <view
-            class="position {{position.is_out?'out':''}} {{hall===position.id?'active':''}}"
-            data-id="{{position.id}}"
-            bindtap="changeHall"
-          >
-            <view class="name">
-              {{position.name}}
-            </view>
-          </view>
-        </block>
-        <view class="search-container">
-          <image
-            class="search-background"
-            src="../../images/category/background_input.png"
-            mode="widthFix"
-          />
-          <image
-            class="search-icon"
-            src="../../images/common/icon_search.png"
-            mode="widthFix"
-          />
-          <input
-            type="text"
-            bindconfirm="changeKeyword"
-            placeholder-style="color:#A0C9FD;"
-            confirm-type="search"
-            placeholder="请输入展商名称"
-          />
 
-        </view>
+  <view
+    class="collapse-contaienr"
+    wx:for="{{companyList}}"
+    wx:key="index"
+  >
+    <view class="collapse-title">
+      <view
+        class="label"
+        bindtap="toggleCollapse"
+        data-index="{{index}}"
+      >
+        <div class="title">
+          <view class="year">
+            {{item.year}}
+          </view>
+          {{item.name}}
+        </div>
+        <image class="arrow {{show[index]?'open':''}}" src="../../images/common/icon_arrow_down.png" />
       </view>
+
     </view>
-    <view class="page__bd">
-      <view class=" exhibitors">
-        <view class="weui-panel__bd">
-          <navigator
-            url="../web/page?url={{item.link}}&title={{item.name||'展商秀'}}&sence={{item.sence}}"
-            class="weui-media-box weui-media-box_appmsg item"
-            hover-class="weui-cell_active"
-            wx:for="{{company_list}}"
-            wx:key="id"
-          >
-            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg weui-flex logo-container">
+    <view class="collapse-content {{show[index]?'show':'hide'}}" style="height:{{item.list.length*118}}rpx">
+      <view
+        wx:for="{{item.list}}"
+        wx:for-item="company"
+        class="collapse-item"
+        wx:key="name"
+      >
+        <view class="content">
+          <view class="star-container">
+            <view class="star">
               <image
-                class="weui-media-box__thumb"
-                src="{{item.logoView}}"
-                mode="aspectFit"
-                lazy-load="{{true}}"
-              />
-            </view>
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-              <view class="weui-media-box__title weui-flex title">
-                <view>{{item.name}}</view>
-              </view>
-              <view>
-                <view class="mark">
-                  已申报
-                </view>
-              </view>
-              <view class="weui-media-box__desc desc">{{item.content}}</view>
-            </view>
-            <view class="weui-media-box__fd">
-              <image
-                class="icon-detail"
-                src="../../images/common/icon_detail.png"
+                wx:for="{{company.star}}"
+                wx:key="idx"
+                wx:for-item="star"
+                wx:for-index="idx"
+                src="../../images/common/icon_star.png"
                 mode="widthFix"
               />
-
             </view>
-
-          </navigator>
+          </view>
+          <view class="name">
+            {{company.name}}
+          </view>
         </view>
-      </view>
-      <view wx:if="{{loadding}}" class="weui-loadmore">
-        <view class="weui-loading"></view>
-        <view class="weui-loadmore__tips">正在加载</view>
       </view>
     </view>
   </view>
