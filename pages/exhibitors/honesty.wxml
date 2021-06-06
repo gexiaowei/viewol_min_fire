@@ -26,7 +26,7 @@
       </view>
 
     </view>
-    <view class="collapse-content {{show[index]?'show':'hide'}}" style="height:{{item.list.length*118}}rpx">
+    <view class="collapse-content {{show[index]?'show':'hide'}}" style="height:{{item.height}}">
       <view
         wx:for="{{item.list}}"
         wx:for-item="company"

@@ -6,6 +6,8 @@ App({
     if (user_id && user_id > 0) {
       this.globalData.uid = user_id
     }
+    const { windowWidth } = wx.getSystemInfoSync()
+    this.globalData.pixelRatio = 750 / windowWidth
   },
   globalData: {
     honesty_json: 'https://www.view-ol.com/cxqy.json',
