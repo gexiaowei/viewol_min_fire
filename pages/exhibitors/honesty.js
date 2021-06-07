@@ -32,8 +32,8 @@ Page({
     list.forEach((category, index) => {
       category.year = /\d{4}年/.exec(category.name)[0]
       category.name = category.name.replace(/\d{4}年/, '')
-      category.height =
-        this.getRealHeight([115, 2], category.list.length) + 'px'
+      // category.height =
+      //   this.getRealHeight([115, 2], category.list.length) + 'px'
       show.push(false)
       category.list.forEach(company => {
         company.star = company.star.split('')
