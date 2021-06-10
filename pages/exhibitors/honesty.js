@@ -1,6 +1,5 @@
 const {
-  globalData,
-  globalData: { honesty_json, expoId, pixelRatio, regeneratorRuntime }
+  globalData: { honesty_json, pixelRatio, regeneratorRuntime }
 } = getApp()
 
 Page({

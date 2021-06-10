@@ -1,7 +1,6 @@
 import util from '../../utils/util.js'
 
 const {
-  globalData,
   globalData: { http, expoId, regeneratorRuntime }
 } = getApp()
 

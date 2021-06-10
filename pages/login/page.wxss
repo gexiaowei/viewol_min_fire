@@ -1,61 +1,61 @@
 page {
-    height: 100%;
-    background: #aecae6;
+  height: 100%;
+  background: #aecae6;
 }
 
 .page_hd image {
-    width: 100%;
+  width: 100%;
 }
 
 .page_bd {
-    padding-top: 200rpx;
-    text-align: center;
-    color: #2b3c4b;
-    font-size: 28rpx;
+  padding-top: 200rpx;
+  text-align: center;
+  color: #2b3c4b;
+  font-size: 28rpx;
 }
 
 .page_cannel {
-    margin: 20rpx 0rpx 0rpx 0rpx ;
-    color: #AAAAAA;
-    background-color: #AAAAAA;
+  margin: 20rpx 0rpx 0rpx 0rpx;
+  color: #aaaaaa;
+  background-color: #aaaaaa;
 }
 
 .page_bd .tip {
-    position: relative;
+  position: relative;
 }
 
 .page_bd .tip::before {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: #2b3c4b;
-    width: 10%;
-    left: 20%;
-    top: 50%;
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: #2b3c4b;
+  width: 10%;
+  left: 20%;
+  top: 50%;
 }
 
 .page_bd .tip::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: #2b3c4b;
-    width: 10%;
-    right: 20%;
-    top: 50%;
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: #2b3c4b;
+  width: 10%;
+  right: 20%;
+  top: 50%;
 }
 
 .page_bd .desc {
-    margin-top: 30rpx;
+  margin-top: 30rpx;
 }
 
 .page_fd {
-    margin-top: 350rpx;
-    padding: 0 20%;
+  margin-top: 350rpx;
+  padding: 0 20%;
 }
 
 .page_fd button {
-    background: #2661a7;
-    color: white;
-    font-size: 36rpx;
-    border: none;
+  background: #2661a7;
+  color: white;
+  font-size: 36rpx;
+  border: none;
 }

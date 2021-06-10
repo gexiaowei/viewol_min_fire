@@ -1,62 +1,81 @@
 <view class="page">
-    <view class="personal">
-        <image class="background" mode="widthFix" src="../../images/my/bg_personal.png"></image>
-        <view class="personal-container">
-            <image class="avatar" src="{{headImgUrl}}"></image>
-            <view class="phone">
-                <text>{{phone}}</text>
-            </view>
-        </view>
+  <view class="personal">
+    <image
+      class="background"
+      mode="widthFix"
+      src="../../images/my/bg_personal.png"
+    ></image>
+    <view class="personal-container">
+      <image class="avatar" src="{{headImgUrl}}"></image>
+      <view class="phone">
+        <text>{{phone}}</text>
+      </view>
     </view>
-    <view class="weui-cells weui-cells_after-title detail">
-        <navigator url="/pages/web/page?url={{url}}&title=报名" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-            <view class="weui-cell__hd">
-                <image src="../../images/my/icon_sign.png" mode="widthFix" class="icon"></image>
-            </view>
-            <view class="weui-cell__bd">报名</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </navigator>
-        <view class="weui-cell">
-            <view class="weui-cell__hd">
-                <image src="../../images/my/icon_company.png" mode="widthFix" class="icon"></image>
-            </view>
-            <view class="weui-cell__bd">单位</view>
-            <view class="weui-cell__ft">{{company}}</view>
-        </view>
-        <view class="weui-cell">
-            <view class="weui-cell__hd">
-                <image src="../../images/my/icon_position.png" mode="widthFix" class="icon"></image>
-            </view>
-            <view class="weui-cell__bd">职位</view>
-            <view class="weui-cell__ft">{{position}}</view>
-        </view>
-        <view class="weui-cell">
-            <view class="weui-cell__hd">
-                <image src="../../images/my/icon_mail.png" mode="widthFix" class="icon"></image>
-            </view>
-            <view class="weui-cell__bd">邮箱</view>
-            <view class="weui-cell__ft">{{email}}</view>
-        </view>
-        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="goMyActivity">
-            <view class="weui-cell__hd">
-                <image src="../../images/my/icon_activity.png" mode="widthFix" class="icon"></image>
-            </view>
-            <view class="weui-cell__bd">我参与的论坛</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </view>
-        <!-- <navigator wx:if="{{companyId>0}}" url="../tools/apply?companyId={{companyId}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-            <view class="weui-cell__hd">
-                <image src="../../images/my/icon_apply.png" mode="widthFix" class="icon"></image>
-            </view>
-            <view class="weui-cell__bd">论坛申请</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </navigator> -->
-        <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-            <view class="weui-cell__hd">
-                <image src="../../images/my/icon_share.png" mode="widthFix" class="icon"></image>
-            </view>
-            <view class="weui-cell__bd">图片分享</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </navigator> -->
+  </view>
+  <view class="weui-cells weui-cells_after-title detail">
+    <navigator
+      url="/pages/web/page?url={{url}}&title=报名"
+      class="weui-cell weui-cell_access"
+      hover-class="weui-cell_active"
+    >
+      <view class="weui-cell__hd">
+        <image
+          src="../../images/my/icon_sign.png"
+          mode="widthFix"
+          class="icon"
+        ></image>
+      </view>
+      <view class="weui-cell__bd">报名</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image
+          src="../../images/my/icon_company.png"
+          mode="widthFix"
+          class="icon"
+        ></image>
+      </view>
+      <view class="weui-cell__bd">单位</view>
+      <view class="weui-cell__ft">{{company}}</view>
     </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image
+          src="../../images/my/icon_position.png"
+          mode="widthFix"
+          class="icon"
+        ></image>
+      </view>
+      <view class="weui-cell__bd">职位</view>
+      <view class="weui-cell__ft">{{position}}</view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image
+          src="../../images/my/icon_mail.png"
+          mode="widthFix"
+          class="icon"
+        ></image>
+      </view>
+      <view class="weui-cell__bd">邮箱</view>
+      <view class="weui-cell__ft">{{email}}</view>
+    </view>
+    <view
+      class="weui-cell weui-cell_access"
+      hover-class="weui-cell_active"
+      bindtap="goMyActivity"
+    >
+      <view class="weui-cell__hd">
+        <image
+          src="../../images/my/icon_activity.png"
+          mode="widthFix"
+          class="icon"
+        ></image>
+      </view>
+      <view class="weui-cell__bd">我参与的论坛</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view>
 </view>
+

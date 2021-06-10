@@ -4,7 +4,8 @@ const {
   globalData,
   globalData: { http, expoId, regeneratorRuntime }
 } = getApp()
-const sliderWidth = 28 // 需要设置slider的宽度，用于计算中间位置
+// 需要设置slider的宽度，用于计算中间位置
+const sliderWidth = 28
 
 Page({
   data: {

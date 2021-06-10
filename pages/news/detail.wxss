@@ -1,33 +1,33 @@
-@import "../../weui.wxss";
+@import '../../weui.wxss';
 .page {
-    padding: 20rpx 30rpx;
+  padding: 20rpx 30rpx;
 }
 
 .page_hd .title {
-    font-size: 42rpx;
+  font-size: 42rpx;
 }
 
 .page_hd .time {
-    margin-top: 10rpx;
-    font-size: 26rpx;
-    color: #838383;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #838383;
 }
 
 .page_bd {
-    margin-top: 30rpx;
-    font-size: 36rpx;
-    color: #2b3c4c;
+  margin-top: 30rpx;
+  font-size: 36rpx;
+  color: #2b3c4c;
 }
 
 .page_bd .summary {
-    color: #2b3c4c;
+  color: #2b3c4c;
 }
 
 .page_bd .extra-image {
-    margin-top: 20rpx;
-    width: 100%;
+  margin-top: 20rpx;
+  width: 100%;
 }
 
 .page_content .content {
-    margin-top: 30rpx;
+  margin-top: 30rpx;
 }

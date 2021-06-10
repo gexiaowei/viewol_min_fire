@@ -74,15 +74,8 @@
 
 .line-css {
   width: 50%;
-
   height: 20rpx;
-
   border-right: 1rpx dashed #a7a8a8;
-  /* height:1px;
-
-background: #888;
-
-margin:10 0rpx； */
 }
 
 .infos {

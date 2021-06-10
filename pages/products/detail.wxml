@@ -135,7 +135,7 @@
         <view class="main">评论</view>
       </view>
       <view class="comment">
-         <block wx:for="{{comment}}" wx:key="id">
+        <block wx:for="{{comment}}" wx:key="id">
           <view class="item weui-flex">
             <view class="avatar-container">
               <image

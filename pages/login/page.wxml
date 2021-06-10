@@ -1,19 +1,29 @@
 <view class="page">
-    <view class='page_hd'>
-        <image src='/images/index/title.png' mode="widthFix"></image>
-    </view>
-    <view class='page_bd'>
-        <view class="tip">登录</view>
-        <view class="desc">参展人员需要先登录，才可以操作</view>
-        <!-- <view>本服务提供在线报名，</view> -->
-    </view>
-    <view class="page_fd">
-        
-        <button wx:if="{{!auth}}" open-type="getUserInfo" bindgetuserinfo="login">立即登录</button>
-        <button wx:if="{{auth}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
-            授权手机号码
-        </button>
-        <view class="desc"></view>
-        <button bindtap="channel" class="page_cannel">取消</button>
-    </view>
+  <view class='page_hd'>
+    <image src='/images/index/title.png' mode="widthFix"></image>
+  </view>
+  <view class='page_bd'>
+    <view class="tip">登录</view>
+    <view class="desc">参展人员需要先登录，才可以操作</view>
+    <!-- <view>本服务提供在线报名，</view> -->
+  </view>
+  <view class="page_fd">
+
+    <button
+      wx:if="{{!auth}}"
+      open-type="getUserInfo"
+      bindgetuserinfo="login"
+    >立即登录
+    </button>
+    <button
+      wx:if="{{auth}}"
+      open-type="getPhoneNumber"
+      bindgetphonenumber="getPhoneNumber"
+    >
+      授权手机号码
+    </button>
+    <view class="desc"></view>
+    <button bindtap="channel" class="page_cannel">取消</button>
+  </view>
 </view>
+
