@@ -10,8 +10,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: 'module'
   },
-
-  extends: ['prettier', 'prettier/standard'],
+  extends: ['prettier'],
   plugins: ['prettier'],
   globals: {
     __DEV__: true,
