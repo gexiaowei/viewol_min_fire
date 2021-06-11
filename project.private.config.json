@@ -117,6 +117,12 @@
           "pathName": "pages/exhibitors/honesty",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "我的邀请",
+          "pathName": "pages/my/invitation",
+          "query": "",
+          "scene": null
         }
       ]
     }
