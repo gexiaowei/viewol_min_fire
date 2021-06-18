@@ -12,7 +12,7 @@ App({
   globalData: {
     honesty_json: 'https://www.view-ol.com/cxqy.json',
     sign_up_url:
-      'https://service.ciec.com.cn/ciec_sw/modules/register/preRegm/91819/wechat/zh/n',
+      'https://service.ciec.com.cn/ciec_sw/modules/register/preRegm/92072/wechat/zh/n',
     video_url: 'https://home.aiyaopai.com/xiaofangzhanlanhui/index.html',
     userInfo: null,
     http: 'https://www.view-ol.com/viewol_web',
