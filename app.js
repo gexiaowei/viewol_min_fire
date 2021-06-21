@@ -13,7 +13,7 @@ App({
     honesty_json: 'https://www.view-ol.com/cxqy.json',
     sign_up_url:
       'https://service.ciec.com.cn/ciec_sw/modules/register/preRegm/92072/wechat/zh/n',
-    video_url: 'https://home.aiyaopai.com/xiaofangzhanlanhui/index.html',
+    video_url: 'https://20210527.kakaka.15shang.club',
     userInfo: null,
     http: 'https://www.view-ol.com/viewol_web',
     web_http: 'https://www.view-ol.com/',
