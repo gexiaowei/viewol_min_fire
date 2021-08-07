@@ -49,7 +49,7 @@
         "selectedIconPath": "images/common/icon_company_blue.png"
       },
       {
-        "pagePath": "pages/my/page",
+        "pagePath": "pages/my/invitation",
         "text": "我的",
         "iconPath": "images/common/icon_my.png",
         "selectedIconPath": "images/common/icon_my_blue.png"
