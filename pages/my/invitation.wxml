@@ -1,90 +1,90 @@
 <view class="invitation-container">
-    <view class="welcome-container">
+  <view class="welcome-container">
+    <image
+      class="w-100"
+      src="../../images/invitation/nav.png"
+      mode="widthFix"
+    />
+  </view>
+  <view class="person-container">
+    <view class="person">
+      <view class="avatar">
+        <image src=" {{headImgUrl}}" mode="widthFix" />
+        <view class="name">
+          {{userName}}
+        </view>
+      </view>
+      <view class="phone">
+        {{phone}}
+      </view>
+    </view>
+  </view>
+  <view class="information-container">
+    <view class="information-item">
+      <view class="title">单位</view>
+      <view class="value">{{company}}</view>
+    </view>
+    <view class="information-item">
+      <view class="title">职位</view>
+      <view class="value">{{position}}</view>
+    </view>
+    <view class="information-item">
+      <view class="title">邮箱</view>
+      <view class="value">{{email}}</view>
+    </view>
+    <view class="action-container left">
+      <button class="action" bindtap="toTickPage">
         <image
-                class="w-100"
-                src="../../images/invitation/nav.png"
-                mode="widthFix"
+          class="icon"
+          src="../../images/common/icon_phone.png"
+          mode="widthFix"
         />
+        <view class="name">
+          获取电子票
+        </view>
+      </button>
     </view>
-    <view class="person-container">
-        <view class="person">
-            <view class="avatar">
-                <image src=" {{headImgUrl}}" mode="widthFix"/>
-                <view class="name">
-                    晓伟
-                </view>
-            </view>
-            <view class="phone">
-                {{phone}}
-            </view>
-        </view>
-    </view>
-    <view class="information-container">
-        <view class="information-item">
-            <view class="title">单位</view>
-            <view class="value">{{company}}</view>
-        </view>
-        <view class="information-item">
-            <view class="title">职位</view>
-            <view class="value">{{position}}</view>
-        </view>
-        <view class="information-item">
-            <view class="title">邮箱</view>
-            <view class="value">{{email}}</view>
-        </view>
-        <view class="action-container left">
-            <button class="action" bindtap="toTickPage">
-                <image
-                        class="icon"
-                        src="../../images/common/icon_phone.png"
-                        mode="widthFix"
-                />
-                <view class="name">
-                    获取电子票
-                </view>
-            </button>
-        </view>
-    </view>
-    <view class="statistical-container">
-        <view class="statistical">
-            <view class="title">
-                <image
-                        class="icon"
-                        src="../../images/common/icon_person.png"
-                        mode="widthFix"
-                />
-                我的影响力
-            </view>
-            <view class="count">
-                已经邀请了{{inviteeNum}}个好友
-            </view>
-
-        </view>
-        <view class="action-container">
-            <button class="action" open-type="share">
-                <image
-                        class="icon"
-                        src="../../images/common/icon_wechat.png"
-                        mode="widthFix"
-                />
-                <view class="name">
-                    分享微信好友
-                </view>
-            </button>
-            <button class="action" bindtap="savePostImage">
-                <image
-                        class="icon"
-                        src="../../images/common/icon_app.png"
-                        mode="widthFix"
-                />
-                <view class="name">
-                    分享到朋友圈
-                </view>
-
-            </button>
-        </view>
+  </view>
+  <view class="statistical-container">
+    <view class="statistical">
+      <view class="title">
+        <image
+          class="icon"
+          src="../../images/common/icon_person.png"
+          mode="widthFix"
+        />
+        我的影响力
+      </view>
+      <view class="count">
+        已经邀请了{{inviteeNum}}个好友
+      </view>
 
     </view>
+    <view class="action-container">
+      <button class="action" open-type="share">
+        <image
+          class="icon"
+          src="../../images/common/icon_wechat.png"
+          mode="widthFix"
+        />
+        <view class="name">
+          分享微信好友
+        </view>
+      </button>
+      <button class="action" bindtap="savePostImage">
+        <image
+          class="icon"
+          src="../../images/common/icon_app.png"
+          mode="widthFix"
+        />
+        <view class="name">
+          分享到朋友圈
+        </view>
+
+      </button>
+    </view>
+
+  </view>
 
 </view>
 
