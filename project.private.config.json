@@ -129,12 +129,6 @@
           "pathName": "pages/my/invitation",
           "query": "",
           "scene": null
-        },
-        {
-          "name": "pages/my/page",
-          "pathName": "pages/my/page",
-          "query": "",
-          "scene": null
         }
       ]
     }
