@@ -37,6 +37,7 @@ Page({
     // 消费掉首次报名跳转
     if (scene) {
       console.log('处理scene')
+      console.log(scene)
       const [type, id] = decodeURIComponent(scene).split(':')
       switch (type) {
         case '11':
@@ -55,6 +56,21 @@ Page({
               '&title=报名'
           })
           globalData.userJoin = 1
+          break
+        case '14':
+          globalData.invitee = id
+          if (globalData.uid) {
+            wx.navigateTo({
+              url:
+                '../web/page?url=' +
+                encodeURIComponent(globalData.sign_up_url) +
+                '&title=报名'
+            })
+          } else {
+            wx.navigateTo({
+              url: '../login/page'
+            })
+          }
           break
         default:
           break

@@ -27,11 +27,11 @@
           "scene": 1011
         },
         {
-          "id": 3,
-          "name": "报名页面",
+          "name": "邀请页面",
           "pathName": "pages/index/page",
-          "query": "scene=13",
-          "scene": 1035
+          "query": "scene=14:1",
+          "scene": 1035,
+          "referrerInfo": {}
         },
         {
           "id": 2,

@@ -52,7 +52,7 @@ Page({
     const {
       data: { status, message, result }
     } = await wx.pro.request({
-      url: `${http}/wx/maPhoneLogin`,
+      url: `${http}/wx/maPhoneLoginNew`,
       method: 'GET',
       data: {
         code,
@@ -60,17 +60,20 @@ Page({
         headPic,
         encryptedData,
         ivStr,
-        maNum: 3
+        maNum: 3,
+        invitee: globalData.invitee
       }
     })
 
     if (status === '0000') {
+      console.log('请求成功')
       wx.setStorageSync('uid', result['userId'])
       wx.setStorageSync('sid', result['sessionId'])
       globalData.uid = result.userId
       globalData.sessionId = result.sessionId
       globalData.userJoin = result.userJoin
       if (result.userJoin == 0) {
+        console.log('跳转到报名')
         wx.redirectTo({
           url:
             '../web/page?url=' +

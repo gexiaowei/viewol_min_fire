@@ -11,9 +11,11 @@ Page({
   },
   onShow: async function () {
     const version = wx.getStorageSync('version')
-    const user_id = wx.getStorageSync('uid')
-    if (!user_id || !version) {
+    const user_id = globalData.uid || wx.getStorageSync('uid')
+    if (!version) {
       wx.setStorageSync('version', '1')
+    }
+    if (!user_id) {
       wx.navigateTo({
         url: '../login/page'
       })
@@ -39,12 +41,8 @@ Page({
     return {
       title: this.data.title,
       path: `pages/index/page?scene=${this.data.sence}`,
-      success: shareTickets => {
-        console.info(shareTickets + '成功')
-      },
-      fail: function (res) {
-        console.log(res + '失败')
-      }
+      success: shareTickets => {},
+      fail: function (res) {}
     }
   }
 })
