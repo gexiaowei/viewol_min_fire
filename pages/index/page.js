@@ -59,18 +59,12 @@ Page({
           break
         case '14':
           globalData.invitee = id
-          if (globalData.uid) {
-            wx.navigateTo({
-              url:
-                '../web/page?url=' +
-                encodeURIComponent(globalData.sign_up_url) +
-                '&title=报名'
-            })
-          } else {
-            wx.navigateTo({
-              url: '../login/page'
-            })
-          }
+          wx.navigateTo({
+            url:
+              '../web/page?url=' +
+              encodeURIComponent(globalData.sign_up_url) +
+              '&title=报名'
+          })
           break
         default:
           break
