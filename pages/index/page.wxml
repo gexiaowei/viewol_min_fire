@@ -87,7 +87,7 @@
         >
           <!-- <view  class="weui-grid" hover-class="none"> -->
           <image class="weui-grid__icon" src="../../images/index/icon_8.png"></image>
-          <view class="weui-grid__label">线上直播</view>
+          <view class="weui-grid__label">线上展会</view>
           <!-- </view> -->
         </navigator>
       </block>
