@@ -13,7 +13,7 @@ Page({
     recomment_product_list: [],
     recommend_schedule_list: [],
     height_product_swiper: null,
-    web_url: decodeURIComponent(globalData.video_url),
+    web_url: decodeURIComponent(globalData.video_url) + '?t=' + Date.now(),
     video: {
       source: 'http://www.view-ol.com/1.mp4',
       link: 'https://www.baidu.com',
