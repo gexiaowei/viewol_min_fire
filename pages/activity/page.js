@@ -9,7 +9,7 @@ const sliderWidth = 28
 
 Page({
   data: {
-    year: '2021',
+    year: '2023',
     month: '10',
     tabs: [
       {
@@ -62,7 +62,7 @@ Page({
     }, 500)
   },
 
-  onTabItemTap (item) {
+  onTabItemTap(item) {
     globalData.firefighting_activity_self = 0
   },
 

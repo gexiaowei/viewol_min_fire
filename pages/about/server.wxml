@@ -1,41 +1,28 @@
 <view class="page">
-  <image
-    src="../../images/nav.png"
-    mode="widthFix"
-    class="w-100 "
-  ></image>
+  <image src="../../images/nav.png" mode="widthFix" class="w-100 "></image>
   <view class="page_bd">
     <block wx:for="{{servers}}" wx:key="index">
       <view class="infos">
         <view class="section-title weui-flex">
           <view class="name">{{item.title}}</view>
-          <view class="sub-title">CHINA FIRE 2021</view>
+          <view class="sub-title">CHINA FIRE 2023</view>
           <view class="text-center background-image">
             <image src="../../images/about/bakground_title.png" mode="widthFix" />
           </view>
         </view>
         <view class="content-container">
-          <view
-            class="content"
-            wx:for="{{item.content}}"
-            wx:for-item="content"
-          >
+          <view class="content" wx:for="{{item.content}}" wx:for-item="content">
             <view class="note" wx:if="{{!!content.note}}">
               {{content.note}}
             </view>
             <view class="sub-title" wx:if="{{!!content.title}}">{{content.title}}</view>
-            <view
-              class="info {{!!info?'':'empty'}}"
-              wx:for="{{content.info}}"
-              wx:for-item="info"
-            >{{info}}
+            <view class="info {{!!info?'':'empty'}}" wx:for="{{content.info}}" wx:for-item="info"
+              >{{info}}
             </view>
-            <view class='line-css'></view>
+            <view class="line-css"></view>
           </view>
         </view>
       </view>
-
     </block>
   </view>
 </view>
-
