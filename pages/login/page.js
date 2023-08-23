@@ -24,9 +24,7 @@ Page({
   login: async function () {
     try {
       const { userInfo } = await wx.pro.getUserInfo()
-      const { code } = await wx.pro.login()
       this.setData({
-        code,
         nickName: userInfo['nickName'],
         headPic: userInfo['avatarUrl']
       })
@@ -48,7 +46,8 @@ Page({
   },
 
   loginWithPhone: async function ({ encryptedData, ivStr }) {
-    let { code, nickName, headPic } = this.data
+    let { nickName, headPic } = this.data
+    const { code } = await wx.pro.login()
     const {
       data: { status, message, result }
     } = await wx.pro.request({

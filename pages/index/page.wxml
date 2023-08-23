@@ -280,7 +280,7 @@
           </view>
           <view
             class="place"
-            data-url="https://www.view-ol.com/pmt/W2`.jpg"
+            data-url="https://www.view-ol.com/pmt/W2.jpg"
             bindtap="showImage"
           >
             W2
