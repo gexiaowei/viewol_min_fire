@@ -44,7 +44,7 @@ Page({
     const { id, url, title } = event.currentTarget.dataset
     if (url)
       wx.navigateTo({
-        url: `../web/page?url=${url}&title=${title}`
+        url: `../web/page?url=${encodeURIComponent(url)}&title=${title}`
       })
     else
       wx.navigateTo({
